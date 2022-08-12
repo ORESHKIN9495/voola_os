@@ -74,7 +74,7 @@
   }
 
   button {
-    background: var(--scheme-v4);
+    background: var(--scheme-v1);
     border-radius: 10px;
     color: inherit;
     font-size: 12px;
