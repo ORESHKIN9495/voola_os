@@ -10,7 +10,6 @@
       <div class="partnership__items">
         <button>Available on</button>
         <h3>App support</h3>
-
         <p>Also you can run Android™ apps with our dedicatod App Support solution</p>
       </div>
 

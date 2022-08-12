@@ -7,11 +7,10 @@
       <source media="(min-width: 769px)" srcset="../assets/phone-vert/[Mockup] iPhone 31@2x.png" />
       <img src="../assets/phone-vert/[Mockup] iPhone 31@2x.png" alt="" />
     </picture>
+
     <article>
       <h2>Customize to your needs</h2>
-
       <h3>Features</h3>
-
       <p>
         Adaptability is in the core of Voola OS. It can be adapted to different corporate and governmental needs in valious ways and to various levels.<br /><br />Voola OS has
         configurable device policies to match different security requirements and easy extension points to roll your own apps, cloud accounts, location provides, VPN solutions,
@@ -21,7 +20,6 @@
 
     <article>
       <h3>Dedicated device mode</h3>
-
       <p>
         Volla OS is smart at heart, but also a great companion for single-purpose devices designet to handle a few functions really well.<br /><br />
         Focus on creating a great product experience, and let Voola OS worry about the nitty-gritty technical details like connectivity, security, user management, over-the-air
@@ -43,7 +41,6 @@
 
     <article>
       <h3>Hardware</h3>
-
       <p>
         Volla OS has been ported to almost <span> a hundred different devices*</span> with new devices added regularly using our
         <span>Hardware Adaption Development Kit</span>.<br /><br />
@@ -54,7 +51,6 @@
 
     <article>
       <h3>User Interface</h3>
-
       <p>
         VoolaOS has been built ground-up to scale to different from factors and input styles. Sub-pixel scaling support means Volla OS works beautifully on any display size, from
         small smartwatches to smart TVs.<br /><br />
@@ -83,6 +79,18 @@
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+
+    picture {
+      &:nth-child(1) {
+        grid-area: 2;
+      }
+      &:nth-child(4) {
+        grid-area: 4;
+      }
+      &:nth-child(5) {
+        grid-area: 6;
+      }
+    }
   }
 
   span {
