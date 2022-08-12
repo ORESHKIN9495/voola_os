@@ -1,11 +1,15 @@
 <script setup>
 import Hero from './components/Hero.vue'
 import Advantages from './components/Advantages.vue'
+import About from './components/About.vue'
+import Partnership from './components/Partnership.vue'
 </script>
 
 <template>
   <Hero />
   <Advantages />
+  <About />
+  <Partnership />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -40,7 +44,8 @@ import Advantages from './components/Advantages.vue'
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;
   --scheme-h: 46px;
   --scheme-m: 32px;
-  --scheme-s: 18px;
+  --scheme-xs: 12px;
+  --scheme-s: 12px;
 
   // project default template width
   --scheme-max-width: 1920px; // desktop
