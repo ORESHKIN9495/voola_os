@@ -71,6 +71,7 @@ i {
   --scheme-v2: #151f32;
   --scheme-v3: #4e94d7; // primary scheme
   --scheme-v4: #f1f1f1;
+  --scheme-v5: #62686d;
 
   // project font-family
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;

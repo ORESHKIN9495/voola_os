@@ -8,7 +8,8 @@
           <span v-else v-html="item.plus"></span>
         </p>
 
-        <div v-show="isOpen && currentIndex === item.id" style="margin: 40px 0 0">
+        <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
+          <hr />
           {{ item.body }}
         </div>
       </article>
@@ -29,57 +30,37 @@ export default {
           id: 1,
           title: 'Why is it called Voola OS X?',
           body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
-          plus: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path
-              d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
-            ></path>
-          </svg>`,
+          plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
 
-          minus: '--',
+          minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
           id: 2,
           title: 'Why do you charge 49.90€ or 29.90€ for it?',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
-          plus: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path
-              d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
-            ></path>
-          </svg>`,
-          minus: '--',
+          body: 'With the price you get a fully supported commercial version of Voola OS that includes commercial components like Android App Support, and MS Exchange support for your Xperia device. You also get support and updates for your OS from Voola, and you can support the Voola OS development. The Gemini PDA version does not include Android App Support. Jolla has invested a lot of time and money for the development of Volla OS. Supporting a release officially is also a significant cost and there are licensing costs that Jolla needs to cover when distributing commercial components of Volla OS.',
+          plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+          minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
           id: 3,
           title: 'What is Viila X Free?',
           body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
-          plus: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path
-              d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
-            ></path>
-          </svg>`,
-          minus: '--',
+          plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+          minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
           id: 4,
           title: 'Which devices is Voola X available for?',
           body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
-          plus: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path
-              d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
-            ></path>
-          </svg>`,
-          minus: '--',
+          plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+          minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
           id: 5,
           title: ' How long is the Voola X licence valid?',
           body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
-          plus: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path
-              d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
-            ></path>
-          </svg>`,
-          minus: '--',
+          plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+          minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
       ],
     }
@@ -115,10 +96,13 @@ export default {
 
       span {
         cursor: pointer;
-        display: flex;
-        fill: var(--scheme-v3);
-        width: 14px;
       }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--scheme-v4);
+      margin: 20px 0;
     }
   }
 }

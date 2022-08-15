@@ -32,6 +32,11 @@ import Questions from './Questions.vue'
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
 
+    @media only screen and (max-width: 920px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
     div {
       background: var(--scheme-v3);
       padding: 4em;
