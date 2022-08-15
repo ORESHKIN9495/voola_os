@@ -33,8 +33,8 @@ import Questions from './Questions.vue'
     gap: 2em;
 
     div {
-      padding: 4em;
       background: var(--scheme-v3);
+      padding: 4em;
     }
   }
 
