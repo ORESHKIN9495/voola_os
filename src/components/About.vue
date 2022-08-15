@@ -1,12 +1,10 @@
-<script setup></script>
+<script setup>
+import DeviceVert from './DeviceVert.vue'
+</script>
 
 <template>
   <section class="about">
-    <picture>
-      <source media="(max-width: 768px)" srcset="../assets/phone-vert/[Mockup] iPhone 31.png" />
-      <source media="(min-width: 769px)" srcset="../assets/phone-vert/[Mockup] iPhone 31@2x.png" />
-      <img src="../assets/phone-vert/[Mockup] iPhone 31@2x.png" alt="" />
-    </picture>
+    <DeviceVert />
 
     <article>
       <h2>Customize to your needs</h2>
@@ -27,17 +25,9 @@
       </p>
     </article>
 
-    <picture>
-      <source media="(max-width: 768px)" srcset="../assets/phone-vert/[Mockup] iPhone 31.png" />
-      <source media="(min-width: 769px)" srcset="../assets/phone-vert/[Mockup] iPhone 31@2x.png" />
-      <img src="../assets/phone-vert/[Mockup] iPhone 31@2x.png" alt="" />
-    </picture>
+    <DeviceVert />
 
-    <picture>
-      <source media="(max-width: 768px)" srcset="../assets/phone-vert/[Mockup] iPhone 31.png" />
-      <source media="(min-width: 769px)" srcset="../assets/phone-vert/[Mockup] iPhone 31@2x.png" />
-      <img src="../assets/phone-vert/[Mockup] iPhone 31@2x.png" alt="" />
-    </picture>
+    <DeviceVert />
 
     <article>
       <h3>Hardware</h3>
@@ -60,11 +50,7 @@
       </p>
     </article>
 
-    <picture>
-      <source media="(max-width: 768px)" srcset="../assets/phone-vert/[Mockup] iPhone 31.png" />
-      <source media="(min-width: 769px)" srcset="../assets/phone-vert/[Mockup] iPhone 31@2x.png" />
-      <img src="../assets/phone-vert/[Mockup] iPhone 31@2x.png" alt="" />
-    </picture>
+    <DeviceVert />
   </section>
 </template>
 
@@ -93,18 +79,12 @@
     }
   }
 
-  span {
-    color: var(--scheme-v3);
+  picture:nth-child(2n + 2) {
+    text-align: right;
   }
 
-  picture {
-    img {
-      max-height: 400px;
-      max-width: 227px;
-    }
-    &:nth-child(2n + 2) {
-      text-align: right;
-    }
+  span {
+    color: var(--scheme-v3);
   }
 }
 </style>

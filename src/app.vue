@@ -3,6 +3,7 @@ import Hero from './components/Hero.vue'
 import Advantages from './components/Advantages.vue'
 import About from './components/About.vue'
 import Partnership from './components/Partnership.vue'
+import Faq from './components/Faq.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import Partnership from './components/Partnership.vue'
   <Advantages />
   <About />
   <Partnership />
+  <Faq />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -31,6 +33,36 @@ import Partnership from './components/Partnership.vue'
   font-family: 'Renner*';
   src: local('./assets/fonts/renner-medium'), url('./assets/fonts/renner-medium.otf') format('opentype');
   font-weight: 500;
+}
+
+@font-face {
+  font-family: 'iconly';
+  src: url('./assets/fonts/icons/iconly.eot');
+  src: url('./assets/fonts/icons/iconly.eot') format('embedded-opentype'), url('./assets/fonts/icons/iconly.woff2') format('woff2'),
+    url('./assets/fonts/icons/iconly.woff') format('woff'), url('./assets/fonts/icons/iconly.ttf') format('truetype'), url('./assets/fonts/icons/iconly.svg') format('svg');
+
+  font-display: swap;
+}
+
+.icon-2-user:before {
+  content: '\e063';
+}
+
+.icon-wallet:before {
+  content: '\e001';
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font: 300 40px / 1 'iconly' !important;
+
+  color: var(--scheme-v3);
+
+  opacity: 0.6;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -186,18 +218,13 @@ button {
 }
 
 // set default button properties
-button,
-.button {
+
+button {
   background-color: var(--scheme-v3);
   border-radius: 16px;
   color: var(--scheme-v1);
-
   cursor: pointer;
-
   display: inline-block;
-
   font-size: var(--scheme-s);
-  margin: 4rem 0 0;
-  padding: 16px 80px;
 }
 </style>
