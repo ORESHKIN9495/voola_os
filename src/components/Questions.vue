@@ -78,7 +78,6 @@ export default {
 <style lang="scss" scoped>
 .questions {
   padding: 0;
-  max-width: 800px;
 
   &__item {
     border: 1px solid var(--scheme-v4);
