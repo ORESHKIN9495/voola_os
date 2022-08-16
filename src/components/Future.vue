@@ -18,13 +18,11 @@ export default {
     return {
       listItems: [
         {
-          id: 1,
           title: 'Reliable corporate platform',
           body: 'Voola OS is a secure mobile operating system optimized to run on smartphones and tablets, and also easily adaptable to all kinds of embedded devices and use cases.',
           icon: `<svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 9v16c0 6.4-1.563 8-7.813 8H8.813C2.563 33 1 31.4 1 25V9c0-6.4 1.563-8 7.813-8h9.374C24.438 1 26 2.6 26 9ZM16.625 6.6h-6.25" stroke="#4E94D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 28.36c1.338 0 2.422-1.11 2.422-2.48 0-1.37-1.084-2.48-2.422-2.48s-2.422 1.11-2.422 2.48c0 1.37 1.084 2.48 2.422 2.48Z" stroke="#4E94D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
-          id: 2,
           title: 'User experience at the core',
           body: 'The main design principles of Voola OS have always included a seamless user experience combined with unique and clean Scandinavian design.',
           icon: `<svg width="32" height="32"  fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +49,6 @@ export default {
         </svg>`,
         },
         {
-          id: 3,
           title: 'Fourt generation security',
           body: 'Voola OS has a host of modern security functionalities developed specifically for corporate and governmental environments.',
           icon: `<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +63,6 @@ export default {
         </svg>`,
         },
         {
-          id: 4,
           title: 'World-class developer experience',
           body: 'Voola OS is an open platform with an active open source contribution model.',
           icon: `<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +85,6 @@ export default {
         </svg>`,
         },
         {
-          id: 5,
           title: 'Voola OS whitepaper',
           body: 'Learn more about Voola OS. On the site technical article provides an overview of Voola OS ecosystem and more.',
           button: `<button style='font-size: var(--scheme-xs);
@@ -114,7 +109,6 @@ export default {
         </svg>`,
         },
         {
-          id: 6,
           title: 'Voola X device program',
           body: 'Voola X is Jolla’s officially supported downloadable version of Voola OS for selected devices. Download and install to join the development.',
           icon: `<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -5,6 +5,8 @@ import About from './components/About.vue'
 import Partnership from './components/Partnership.vue'
 import Faq from './components/Faq.vue'
 import Future from './components/Future.vue'
+import Models from './components/Models.vue'
+import Corporation from './components/Corporation.vue'
 </script>
 
 <template>
@@ -14,6 +16,8 @@ import Future from './components/Future.vue'
   <Partnership />
   <Faq />
   <Future />
+  <Models />
+  <Corporation />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

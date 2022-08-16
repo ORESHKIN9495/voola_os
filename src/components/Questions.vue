@@ -13,7 +13,7 @@
       </div>
     </article>
 
-    <a href="/" style="color: var(--scheme-v3)">Show more</a>
+    <a href="/" style="color: var(--scheme-v3); margin-top: 800px">Show more</a>
   </section>
 </template>
 
