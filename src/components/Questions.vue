@@ -1,19 +1,17 @@
 <template>
   <section class="questions">
-    <transition-group name="list">
-      <article class="questions__item" v-for="item in listItems" :key="item.id" :open="isOpen && currentIndex === item.id" @click.prevent="toggle(item.id)">
-        <p>
-          {{ item.title }}
-          <span v-if="isOpen && currentIndex === item.id" v-html="item.minus"></span>
-          <span v-else v-html="item.plus"></span>
-        </p>
+    <article class="questions__item" v-for="item in listItems" :key="item.id" :open="isOpen && currentIndex === item.id" @click.prevent="toggle(item.id)">
+      <p>
+        {{ item.title }}
+        <span v-if="isOpen && currentIndex === item.id" v-html="item.minus"></span>
+        <span v-else v-html="item.plus"></span>
+      </p>
 
-        <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
-          <hr />
-          {{ item.body }}
-        </div>
-      </article>
-    </transition-group>
+      <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
+        <hr />
+        {{ item.body }}
+      </div>
+    </article>
 
     <a href="/" style="color: var(--scheme-v3)">Show more</a>
   </section>
@@ -31,7 +29,6 @@ export default {
           title: 'Why is it called Voola OS X?',
           body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
           plus: `<svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-
           minus: `<svg width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         },
         {
@@ -81,6 +78,7 @@ export default {
 <style lang="scss" scoped>
 .questions {
   padding: 0;
+  max-width: 800px;
 
   &__item {
     border: 1px solid var(--scheme-v4);
@@ -105,11 +103,5 @@ export default {
       margin: 20px 0;
     }
   }
-}
-
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.1s ease-in-out;
 }
 </style>

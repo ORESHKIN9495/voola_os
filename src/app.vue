@@ -4,6 +4,7 @@ import Advantages from './components/Advantages.vue'
 import About from './components/About.vue'
 import Partnership from './components/Partnership.vue'
 import Faq from './components/Faq.vue'
+import Future from './components/Future.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Faq from './components/Faq.vue'
   <About />
   <Partnership />
   <Faq />
+  <Future />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -77,7 +79,7 @@ i {
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;
   --scheme-h: 46px;
   --scheme-m: 32px;
-  --scheme-xs: 12px;
+  --scheme-xs: 16px;
   --scheme-s: 12px;
 
   // project default template width

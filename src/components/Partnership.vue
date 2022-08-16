@@ -31,7 +31,7 @@ import Partnercard from './Partnercard.vue'
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(2, 1fr);
-  margin: 20em auto 0;
+  margin: 4em auto 0;
   max-width: calc(var(--scheme-max-width) / 1.2);
 
   &__link {
