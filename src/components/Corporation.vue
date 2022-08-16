@@ -45,7 +45,7 @@ export default {
       ],
     }
   },
-  methods: {},
+
   components: { DeviceVert },
 }
 </script>
