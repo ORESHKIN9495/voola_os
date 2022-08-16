@@ -13,7 +13,8 @@
 
     <article class="corp__items">
       <div class="corp__item" v-for="item in corpItems" :key="item.id">
-        <DeviceVert />
+        <DeviceVert v-if="item.id == 2" size />
+        <DeviceVert v-else />
 
         <h3>
           {{ item.tittle }}
@@ -26,19 +27,24 @@
 
 <script>
 import DeviceVert from './DeviceVert.vue'
+
 export default {
   data() {
     return {
+      currentIndex: null,
       corpItems: [
         {
+          id: 1,
           tittle: 'WPA2 Enterprise',
           descr: 'WLAN gained support for EAP-PEAP, EAP-TLS, and EAP-TTLS authentication methods.',
         },
         {
+          id: 2,
           tittle: 'Device locking',
           descr: 'Remotely lock or securely wipe data from compromised devices.',
         },
         {
+          id: 3,
           tittle: 'Multiple users',
           descr: 'Remotely manage who can access the device, add and remove users, control who can call.',
         },
@@ -62,6 +68,11 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 4em 0;
+
+    @media only screen and (max-width: 920px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 }
 </style>
