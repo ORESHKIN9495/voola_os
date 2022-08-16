@@ -28,6 +28,7 @@ import Questions from './Questions.vue'
   }
 
   article {
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
@@ -41,10 +42,6 @@ import Questions from './Questions.vue'
       background: var(--scheme-v3);
       padding: 4em;
     }
-  }
-
-  img {
-    margin-top: -100px;
   }
 }
 </style>
