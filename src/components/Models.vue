@@ -55,13 +55,15 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  justify-items: center;
   margin: 12em auto 0;
   max-width: calc(var(--scheme-max-width) / 1.25);
-  padding: 80px 150px;
+  padding: 60px;
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    justify-items: flex-start;
   }
 }
 </style>

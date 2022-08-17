@@ -29,23 +29,17 @@
       <h3>
         Android Apps
         <p>
-          Voola OS is compatible with the Android™ ecosystem, and so able to run Android apps and support Android device hardware. However, it’s fully independent, and not a
-          derivative or a fork of the Android codebase.<br /><br />
-          Voola licensees choose if they wish to use the Android compatibility part in the OS, or instead opt for fully native solutions.<br /><br />
-          App support is also offered for other Linux-based systems through <span style="color: var(--scheme-v3)">AppSupport for Linux Platforms</span> product.
+          Voola OS is compatible with the Android™ ecosystem, and so able to run Android apps and support Android device hardware. However, it’s fully independent, and not
+          aderivative or a fork of the Android codebase.<br /><br />Voola licensees choose if they wish to use the Android compatibility part in the OS, or instead opt for fully
+          native solutions.<br /><br />App support is also offered for other Linux-based systems through
+          <span style="color: var(--scheme-v3)">AppSupport for Linux Platforms</span> product.
         </p>
       </h3>
     </article>
   </section>
 </template>
 
-<script>
-export default {
-  setup() {
-    return {}
-  },
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .apps {
@@ -66,10 +60,7 @@ export default {
   &__screen {
     align-items: flex-end;
     display: flex;
-
-    picture {
-      margin-right: -25px;
-    }
+    margin-right: -25px;
 
     img {
       max-width: 300px;

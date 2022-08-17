@@ -8,6 +8,11 @@ import Future from './components/Future.vue'
 import Models from './components/Models.vue'
 import Corporation from './components/Corporation.vue'
 import Apps from './components/Apps.vue'
+import AppsList from './components/Apps-list.vue'
+import Developer from './components/Developer.vue'
+import Api from './components/Api.vue'
+import Infrastructure from './components/Infrastructure.vue'
+import Experience from './components/Experience.vue'
 </script>
 
 <template>
@@ -20,6 +25,11 @@ import Apps from './components/Apps.vue'
   <Models />
   <Corporation />
   <Apps />
+  <AppsList />
+  <Developer />
+  <Api />
+  <Infrastructure />
+  <Experience />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -178,6 +188,7 @@ b {
 
 p {
   margin: 0;
+  font-weight: 300;
 }
 
 strong {
