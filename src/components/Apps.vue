@@ -60,7 +60,6 @@
   &__screen {
     align-items: flex-end;
     display: flex;
-    margin-right: -25px;
 
     img {
       max-width: 300px;
