@@ -20,9 +20,9 @@ picture {
     max-width: 227px;
 
     &.size {
+      height: 100%;
       max-height: 500px;
       max-width: 300px;
-      height: 100%;
     }
   }
 }
