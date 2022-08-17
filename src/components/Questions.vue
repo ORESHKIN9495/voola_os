@@ -13,7 +13,7 @@
       </div>
     </article>
 
-    <a href="/" style="color: var(--scheme-v3); margin-top: 800px">Show more</a>
+    <a href="/" style="color: var(--scheme-v3)">Show more</a>
   </section>
 </template>
 
@@ -77,9 +77,11 @@ export default {
 
 <style lang="scss" scoped>
 .questions {
+  max-width: 800px;
   padding: 0;
 
   &__item {
+    background: var(--scheme-v1);
     border: 1px solid var(--scheme-v4);
     box-shadow: 0 15px 15px 5px var(--scheme-v4);
     border-radius: 10px;

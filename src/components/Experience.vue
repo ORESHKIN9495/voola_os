@@ -27,7 +27,7 @@ export default {
   align-items: flex-end;
   background-image: image-set(url('../assets/Group 1273@2x.png') 2x, url('../assets/Group 1273.png') 1x);
   background-repeat: no-repeat;
-  background-position: left initial;
+  background-position: left;
   background-size: 650px;
   display: flex;
   flex-direction: column;
