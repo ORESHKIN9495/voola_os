@@ -24,6 +24,12 @@ picture {
       max-height: 500px;
       max-width: 300px;
     }
+
+    &.size-l {
+      height: 100%;
+      max-height: 800px;
+      max-width: 400px;
+    }
   }
 }
 </style>

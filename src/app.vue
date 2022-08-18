@@ -13,6 +13,7 @@ import Developer from './components/Developer.vue'
 import Api from './components/Api.vue'
 import Infrastructure from './components/Infrastructure.vue'
 import Experience from './components/Experience.vue'
+import Overhauled from './components/Overhauled.vue'
 </script>
 
 <template>
@@ -30,6 +31,7 @@ import Experience from './components/Experience.vue'
   <Api />
   <Infrastructure />
   <Experience />
+  <Overhauled />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
