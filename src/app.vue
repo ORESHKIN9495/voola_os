@@ -14,6 +14,7 @@ import Api from './components/Api.vue'
 import Infrastructure from './components/Infrastructure.vue'
 import Experience from './components/Experience.vue'
 import Overhauled from './components/Overhauled.vue'
+import Calendar from './components/Calendar.vue'
 </script>
 
 <template>
@@ -32,6 +33,7 @@ import Overhauled from './components/Overhauled.vue'
   <Infrastructure />
   <Experience />
   <Overhauled />
+  <Calendar />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -92,6 +94,7 @@ i {
   --scheme-v3: #4e94d7; // primary scheme
   --scheme-v4: #f1f1f1;
   --scheme-v5: #62686d;
+  --scheme-v6: #4e94d708;
 
   // project font-family
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;
