@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
   size: Boolean,
+  sizeL: Boolean,
 })
 </script>
 
@@ -8,7 +9,7 @@ defineProps({
   <picture>
     <source media="(max-width: 768px)" srcset="../assets/[Mockup] iPhone 31.png" />
     <source media="(min-width: 769px)" srcset="../assets/[Mockup] iPhone 31@2x.png" />
-    <img :class="[size ? 'size' : '']" src="../assets/[Mockup] iPhone 31@2x.png" alt="" />
+    <img :class="[size ? 'size' : '', sizeL ? 'size-l' : '']" src="../assets/[Mockup] iPhone 31@2x.png" alt="" />
   </picture>
 </template>
 
@@ -17,18 +18,18 @@ defineProps({
 picture {
   img {
     max-height: 400px;
-    max-width: 227px;
+    max-width: 200px;
 
     &.size {
       height: 100%;
       max-height: 500px;
-      max-width: 300px;
+      max-width: 250px;
     }
 
     &.size-l {
       height: 100%;
-      max-height: 800px;
-      max-width: 400px;
+      max-height: 600px;
+      max-width: 300px;
     }
   }
 }

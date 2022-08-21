@@ -16,7 +16,7 @@
 
         <h3>
           {{ item.title }}
-          <p style="margin-top: 20px">{{ item.body }}</p>
+          <p style="font-size: var(--scheme-xs); margin-top: 20px">{{ item.body }}</p>
         </h3>
       </div>
     </article>
@@ -60,9 +60,15 @@ export default {
   text-align: center;
 
   article {
+    align-items: baseline;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+
+    @media only screen and (max-width: 1020px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 }
 </style>
