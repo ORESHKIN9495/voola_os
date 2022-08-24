@@ -54,13 +54,7 @@
   </section>
 </template>
 
-<script>
-export default {
-  setup() {
-    return {}
-  },
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .more {
@@ -70,13 +64,13 @@ export default {
 
   img {
     border-radius: 25px;
-    width: 196px;
     height: 300px;
+    width: 196px;
   }
 
   .rotate {
-    width: 300px;
     height: 196px;
+    width: 300px;
   }
 
   h3 {
@@ -115,9 +109,11 @@ export default {
     }
   }
 
-  @media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    text-align: center;
+    justify-items: center;
 
     &__item {
       grid-template-columns: 1fr;
@@ -134,7 +130,7 @@ export default {
       }
 
       &:nth-child(2n + 1) {
-        justify-items: flex-start;
+        justify-items: center;
       }
     }
   }

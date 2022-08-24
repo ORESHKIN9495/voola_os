@@ -141,6 +141,7 @@ i {
 html,
 body {
   margin: 0;
+  background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
@@ -166,7 +167,7 @@ body {
 main,
 section {
   position: relative;
-  margin: 4em auto 0;
+  margin: 8em auto 0;
   max-width: calc(var(--scheme-max-width) / 1.2);
 }
 

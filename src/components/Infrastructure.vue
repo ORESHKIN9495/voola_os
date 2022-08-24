@@ -20,7 +20,7 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  padding: 60px;
+  padding: 60px 20px;
   text-align: center;
 }
 </style>

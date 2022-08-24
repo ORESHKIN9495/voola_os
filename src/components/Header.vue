@@ -53,6 +53,8 @@ onMounted(() => {
   max-width: 100%;
   position: sticky;
   transform: translateY(-200px);
+  margin: 0;
+  padding: 0;
   top: 0;
   transition: transform 0.5s ease-in-out;
   z-index: 1;
@@ -61,7 +63,7 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px;
     position: relative;
 
     picture {

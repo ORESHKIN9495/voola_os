@@ -21,13 +21,11 @@ picture {
     max-width: 200px;
 
     &.size {
-      height: 100%;
       max-height: 500px;
       max-width: 250px;
     }
 
     &.size-l {
-      height: 100%;
       max-height: 600px;
       max-width: 300px;
     }

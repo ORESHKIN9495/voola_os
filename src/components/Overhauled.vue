@@ -23,34 +23,27 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import DeviceVert from './DeviceVert.vue'
-export default {
-  data() {
-    return {
-      itemList: [
-        {
-          id: 1,
-          title: 'Site permissions',
-          body: 'Define access rules for your browser and individual sites. The renewed browser also has new bookmark and history views, and allowsyou to save websites as PDF.',
-        },
-        {
-          id: 2,
-          title: 'Captive portal mode',
-          body: 'Automatically opened captive portals are now run in a special restricted mode, blocked from accessing system cookies.',
-        },
-        {
-          id: 3,
-          title: 'Certificate info',
-          body: 'Access site security information easily from the address bar and review certificate issuers. Get notified when security vulnerabilities are discovered.',
-        },
-      ],
-    }
+import { ref } from 'vue'
+
+const itemList = ref([
+  {
+    id: 1,
+    title: 'Site permissions',
+    body: 'Define access rules for your browser and individual sites. The renewed browser also has new bookmark and history views, and allowsyou to save websites as PDF.',
   },
-  components: {
-    DeviceVert,
+  {
+    id: 2,
+    title: 'Captive portal mode',
+    body: 'Automatically opened captive portals are now run in a special restricted mode, blocked from accessing system cookies.',
   },
-}
+  {
+    id: 3,
+    title: 'Certificate info',
+    body: 'Access site security information easily from the address bar and review certificate issuers. Get notified when security vulnerabilities are discovered.',
+  },
+])
 </script>
 
 <style lang="scss" scoped>

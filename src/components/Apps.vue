@@ -39,7 +39,7 @@
   </section>
 </template>
 
-<script></script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .apps {

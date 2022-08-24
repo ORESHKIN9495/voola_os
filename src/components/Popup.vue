@@ -15,8 +15,6 @@ const emit = defineEmits(['close'])
 
 const currentIndex = ref(null)
 
-const color = ref(null)
-
 const titles = ref([
   {
     id: 'advant',
@@ -82,10 +80,9 @@ const titles = ref([
 
 const click = (id, e) => {
   const comp = ref([document.getElementById(id)])
+
   if (currentIndex.value !== id) {
     currentIndex.value = id
-    color.value = 'black'
-    e.target.style.color = color.value
 
     comp.value.forEach((el) => {
       const ident = el.id
@@ -96,8 +93,6 @@ const click = (id, e) => {
     })
   } else {
     currentIndex.value = null
-    color.value = ''
-    e.target.style.color = color.value
   }
 }
 </script>
@@ -115,6 +110,7 @@ const click = (id, e) => {
   z-index: 10;
   padding: 80px 40px 0;
   height: 900px;
+  margin: 0;
   width: 400px;
   overflow-y: auto;
   scrollbar-width: none;
@@ -122,8 +118,8 @@ const click = (id, e) => {
   svg {
     cursor: pointer;
     position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 45px;
+    top: 45px;
     z-index: 11;
   }
 
@@ -132,16 +128,21 @@ const click = (id, e) => {
     cursor: pointer;
     font-size: 24px;
     margin-bottom: 10px;
-  }
 
-  .active {
-    color: red;
+    &:hover {
+      color: #000;
+    }
   }
 
   @media only screen and (max-width: 920px) {
     & {
       height: 450px;
-      width: 200px;
+      width: 250px;
+
+      svg {
+        right: 25px;
+        top: 25px;
+      }
 
       a {
         font-size: 16px;

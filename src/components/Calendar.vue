@@ -12,26 +12,21 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import DeviceVert from './DeviceVert.vue'
-export default {
-  data() {
-    return {
-      itemList: [
-        {
-          title: 'Meeting invitations',
-          body: 'You can easily set scheduled automatic replies for when you are not available.',
-        },
 
-        {
-          title: 'And more',
-          body: 'Voola X Calendar also supports subscribing to ICS web calendars. Email app comes with global address list (GAL) support. Attachment opening is 50-90% faster due to the dozens of optimizations made to the document viewer since Voola 1.',
-        },
-      ],
-    }
+const itemList = ref([
+  {
+    title: 'Meeting invitations',
+    body: 'You can easily set scheduled automatic replies for when you are not available.',
   },
-  components: { DeviceVert },
-}
+
+  {
+    title: 'And more',
+    body: 'Voola X Calendar also supports subscribing to ICS web calendars. Email app comes with global address list (GAL) support. Attachment opening is 50-90% faster due to the dozens of optimizations made to the document viewer since Voola 1.',
+  },
+])
 </script>
 
 <style lang="scss" scoped>

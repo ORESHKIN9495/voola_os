@@ -19,34 +19,29 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import DeviceVert from './DeviceVert.vue'
-export default {
-  data() {
-    return {
-      itemList: [
-        {
-          title: 'Redesigned incoming calls',
-          body: 'In Voola X the gesture indications to answer and reject calls are right under your thumb. ',
-        },
+import { ref } from 'vue'
 
-        {
-          title: 'Quick messages',
-          body: 'Sometimes writing a reply isa hassle. Send a quick reply and go about your business.',
-        },
-        {
-          title: 'Call reminders',
-          body: 'If you are too busy to answer, add a reminder for you to call the person back.',
-        },
-        {
-          title: 'Call ending',
-          body: 'The full-screen call ending dialog has been replaced with a smaller popup.',
-        },
-      ],
-    }
+const itemList = ref([
+  {
+    title: 'Redesigned incoming calls',
+    body: 'In Voola X the gesture indications to answer and reject calls are right under your thumb. ',
   },
-  components: { DeviceVert },
-}
+
+  {
+    title: 'Quick messages',
+    body: 'Sometimes writing a reply isa hassle. Send a quick reply and go about your business.',
+  },
+  {
+    title: 'Call reminders',
+    body: 'If you are too busy to answer, add a reminder for you to call the person back.',
+  },
+  {
+    title: 'Call ending',
+    body: 'The full-screen call ending dialog has been replaced with a smaller popup.',
+  },
+])
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +54,7 @@ export default {
   max-width: calc(var(--scheme-max-width) / 1.25);
 
   img {
-    max-width: 500px;
+    max-width: 450px;
   }
 
   span {

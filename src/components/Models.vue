@@ -12,39 +12,34 @@
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      models: [
-        {
-          title: 'Sony Xperia 10 III',
-        },
-        {
-          title: 'Sony Xperia 10 II',
-        },
-        {
-          title: 'Sony Xperia 10',
-        },
-        {
-          title: 'Sony Xperia 10 Plus',
-        },
-        {
-          title: 'Single and dual-SIM variants of Sony Xperia X2',
-        },
-        {
-          title: 'Sony Xperia X2 Ultra',
-        },
-        {
-          title: 'Sony Xperia X',
-        },
-        {
-          title: 'Gemini PDA',
-        },
-      ],
-    }
+<script setup>
+import { ref } from 'vue'
+const models = ref([
+  {
+    title: 'Sony Xperia 10 III',
   },
-}
+  {
+    title: 'Sony Xperia 10 II',
+  },
+  {
+    title: 'Sony Xperia 10',
+  },
+  {
+    title: 'Sony Xperia 10 Plus',
+  },
+  {
+    title: 'Single and dual-SIM variants of Sony Xperia X2',
+  },
+  {
+    title: 'Sony Xperia X2 Ultra',
+  },
+  {
+    title: 'Sony Xperia X',
+  },
+  {
+    title: 'Gemini PDA',
+  },
+])
 </script>
 
 <style lang="scss" scoped>
@@ -56,7 +51,7 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-items: center;
-  padding: 60px;
+  padding: 60px 20px;
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;

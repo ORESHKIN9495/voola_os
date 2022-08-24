@@ -19,7 +19,7 @@ picture {
   margin: auto;
 
   img {
-    max-height: 360px;
+    max-height: 400px;
 
     &.mirrorY {
       transform: scale(-1, 1) rotate(90deg);
@@ -28,7 +28,7 @@ picture {
     &.size {
       height: 100%;
       max-height: 250px;
-      max-width: 500px;
+      max-width: 400px;
     }
   }
 }

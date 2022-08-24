@@ -27,7 +27,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 600px;
+  margin: 0;
+  max-width: 580px;
   padding: 40px;
 
   &__items {
@@ -53,8 +54,8 @@
     button {
       border-radius: 35px;
       background: var(--scheme-v1);
-      padding: 22px;
       height: 60px;
+      padding: 22px;
 
       svg {
         fill: var(--scheme-v3);

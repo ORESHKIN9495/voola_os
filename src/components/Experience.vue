@@ -12,28 +12,23 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import ExperienceList from './Experience-list.vue'
-export default {
-  setup() {
-    return {}
-  },
-  components: { ExperienceList },
-}
 </script>
 
 <style lang="scss" scoped>
 .exp {
-  align-items: flex-end;
   background-image: image-set(url('../assets/Group 1273@2x.png') 2x, url('../assets/Group 1273.png') 1x);
+  background-image: -webkit-image-set(url('../assets/Group 1273@2x.png') 2x, url('../assets/Group 1273.png') 1x);
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 650px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 
   @media only screen and (max-width: 920px) {
-    background-position: center bottom;
+    background-position: center;
+    align-items: center;
   }
 }
 </style>

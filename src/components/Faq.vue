@@ -1,42 +1,27 @@
+<template>
+  <section id="faq" class="faq">
+    <h2>
+      FAQ
+      <p style="font-size: var(--scheme-xs)">Have questions? We’re here to help.</p>
+    </h2>
+
+    <Questions />
+  </section>
+</template>
+
 <script setup>
 import Questions from './Questions.vue'
 </script>
 
-<template>
-  <section id="faq" class="faq">
-    <h2 style="margin: 0">FAQ</h2>
-    <p>Have questions? We’re here to help.</p>
-
-    <article>
-      <Questions />
-      <picture>
-        <source media="(max-width: 768px)" srcset="../assets/display.png" />
-        <source media="(min-width: 769px)" srcset="../assets/display@2x.png" />
-        <img src="../assets/display@2x.png" alt="" />
-      </picture>
-    </article>
-  </section>
-</template>
-
 <style lang="scss" scoped>
 .faq {
-  article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
+  background-image: -webkit-image-set(url('../assets/display@2x.png') 2x, url('../assets/display.png') 1x);
+  background-image: image-set(url('../assets/display@2x.png') 2x, url('../assets/display.png') 1x);
+  background-position: right center;
+  background-repeat: no-repeat;
 
-    @media only screen and (max-width: 920px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-
-      picture {
-        display: none;
-      }
-    }
-  }
-
-  img {
-    margin-top: -100px;
+  @media only screen and (max-width: 920px) {
+    background-position: center;
   }
 }
 </style>
