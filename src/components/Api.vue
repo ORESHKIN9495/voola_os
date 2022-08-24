@@ -1,5 +1,5 @@
 <template>
-  <section class="api">
+  <section id="api" class="api">
     <h2>
       Bridging the API gap
       <p style="margin-top: 20px; font-size: var(--scheme-xs); max-width: 812px">
@@ -29,7 +29,5 @@ export default {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 600px;
-  margin: 8em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
 }
 </style>

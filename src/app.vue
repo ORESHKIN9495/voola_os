@@ -1,10 +1,11 @@
 <script setup>
+import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Advantages from './components/Advantages.vue'
-import About from './components/About.vue'
+import Customize from './components/Customize.vue'
 import Partnership from './components/Partnership.vue'
 import Faq from './components/Faq.vue'
-import Future from './components/Future.vue'
+import Feature from './components/Feature.vue'
 import Models from './components/Models.vue'
 import Corporation from './components/Corporation.vue'
 import Apps from './components/Apps.vue'
@@ -15,15 +16,20 @@ import Infrastructure from './components/Infrastructure.vue'
 import Experience from './components/Experience.vue'
 import Overhauled from './components/Overhauled.vue'
 import Calendar from './components/Calendar.vue'
+import Email from './components/Email.vue'
+import Calling from './components/Calling.vue'
+import More from './components/More.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
+  <Header />
   <Hero />
   <Advantages />
-  <About />
+  <Customize />
   <Partnership />
   <Faq />
-  <Future />
+  <Feature />
   <Models />
   <Corporation />
   <Apps />
@@ -34,6 +40,10 @@ import Calendar from './components/Calendar.vue'
   <Experience />
   <Overhauled />
   <Calendar />
+  <Email />
+  <Calling />
+  <More />
+  <Footer />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -94,7 +104,7 @@ i {
   --scheme-v3: #4e94d7; // primary scheme
   --scheme-v4: #f1f1f1;
   --scheme-v5: #62686d;
-  --scheme-v6: #4e94d708;
+  --scheme-v6: #00000008;
 
   // project font-family
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -133,6 +143,10 @@ body {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
   background: var(--scheme-v1);
   color: var(--scheme-v2);
@@ -145,13 +159,15 @@ body {
     color: var(--scheme-v1);
   }
   margin: 0 auto;
-  max-width: var(--scheme-max-width);
+  // max-width: var(--scheme-max-width);
   position: relative;
 }
 
 main,
 section {
   position: relative;
+  margin: 4em auto 0;
+  max-width: calc(var(--scheme-max-width) / 1.2);
 }
 
 section {

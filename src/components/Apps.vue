@@ -1,5 +1,5 @@
 <template>
-  <section class="apps">
+  <section id="apps" class="apps">
     <article>
       <h3>
         Fourth generation security
@@ -48,8 +48,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-  margin: 8em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
 
   p {
     font-size: 16px;

@@ -1,5 +1,5 @@
 <template>
-  <section class="infra">
+  <section id="infra" class="infra">
     <h2 style="font-weight: 400; max-width: 915px">
       Infrastructure for your ecosystem
 
@@ -20,8 +20,6 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  margin: 12em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
   padding: 60px;
   text-align: center;
 }

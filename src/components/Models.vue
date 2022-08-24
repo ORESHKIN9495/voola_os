@@ -1,5 +1,5 @@
 <template>
-  <section class="models">
+  <section id="models" class="models">
     <h2 style="margin: 0; font-weight: 400">
       VOOLA OS
 
@@ -56,8 +56,6 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-items: center;
-  margin: 12em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
   padding: 60px;
 
   @media only screen and (max-width: 920px) {

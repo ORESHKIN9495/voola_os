@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
   mirrorY: Boolean,
+  size: Boolean,
 })
 </script>
 
@@ -8,7 +9,7 @@ defineProps({
   <picture>
     <source media="(max-width: 768px)" srcset="../assets/[Mockup]-iPhone.png" />
     <source media="(min-width: 769px)" srcset="../assets/[Mockup]-iPhone@2x.png" />
-    <img :class="[mirrorY ? 'mirrorY' : '']" src="../assets/[Mockup]-iPhone@2x.png" alt="" />
+    <img :class="[mirrorY ? 'mirrorY' : '', size ? 'size' : '']" src="../assets/[Mockup]-iPhone@2x.png" alt="" />
   </picture>
 </template>
 
@@ -22,6 +23,12 @@ picture {
 
     &.mirrorY {
       transform: scale(-1, 1) rotate(90deg);
+    }
+
+    &.size {
+      height: 100%;
+      max-height: 250px;
+      max-width: 500px;
     }
   }
 }

@@ -3,7 +3,7 @@ import Partnercard from './Partnercard.vue'
 </script>
 
 <template>
-  <section class="partnership">
+  <section id="partnership" class="partnership">
     <Partnercard />
 
     <article>
@@ -31,8 +31,6 @@ import Partnercard from './Partnercard.vue'
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(2, 1fr);
-  margin: 4em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.2);
 
   &__link {
     align-items: center;

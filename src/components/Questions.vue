@@ -83,7 +83,7 @@ export default {
   &__item {
     background: var(--scheme-v1);
     border: 1px solid var(--scheme-v4);
-    box-shadow: 0 15px 15px 5px var(--scheme-v4);
+    box-shadow: 0 15px 15px 5px var(--scheme-v6);
     border-radius: 10px;
     margin: 2em 0;
     padding: 20px;

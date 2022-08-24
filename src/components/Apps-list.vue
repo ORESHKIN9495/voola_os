@@ -54,8 +54,6 @@ export default {
   flex-wrap: wrap;
   gap: 120px;
   justify-content: center;
-  margin: 8em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
   overflow: hidden;
 
   &::before {

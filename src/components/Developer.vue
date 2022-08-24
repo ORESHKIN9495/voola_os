@@ -19,8 +19,6 @@
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  margin: 12em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
   text-align: center;
   padding: 60px;
 }

@@ -3,7 +3,7 @@ import DeviceVert from './DeviceVert.vue'
 </script>
 
 <template>
-  <section class="about">
+  <section id="customize" class="customize">
     <DeviceVert />
 
     <article>
@@ -55,12 +55,10 @@ import DeviceVert from './DeviceVert.vue'
 </template>
 
 <style lang="scss" scoped>
-.about {
+.customize {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
-  max-width: calc(var(--scheme-max-width) / 1.9);
-  margin: 4em auto 0;
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;

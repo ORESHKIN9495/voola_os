@@ -3,8 +3,8 @@ import Questions from './Questions.vue'
 </script>
 
 <template>
-  <section class="faq">
-    <h2>FAQ</h2>
+  <section id="faq" class="faq">
+    <h2 style="margin: 0">FAQ</h2>
     <p>Have questions? We’re here to help.</p>
 
     <article>
@@ -20,13 +20,6 @@ import Questions from './Questions.vue'
 
 <style lang="scss" scoped>
 .faq {
-  margin: 4em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.2);
-
-  h2 {
-    margin: 0;
-  }
-
   article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

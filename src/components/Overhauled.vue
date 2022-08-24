@@ -1,5 +1,5 @@
 <template>
-  <section class="overhauled">
+  <section id="over" class="overhauled">
     <h2>
       Overhauled Browser
       <p style="font-size: var(--scheme-xs); margin-top: 20px">
@@ -55,8 +55,6 @@ export default {
 
 <style lang="scss" scoped>
 .overhauled {
-  margin: 12em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
   text-align: center;
 
   article {

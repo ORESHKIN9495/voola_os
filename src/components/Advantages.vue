@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section>
+  <section id="advant">
     <h2>What you'll get</h2>
     <p>
       With VOOLA, you can get an alternative, secure mobile OS on a high-quality device. VOOLA OS is currently available for Sony Xperia™ devices. You can also start using the
@@ -245,8 +245,6 @@
 
 <style lang="scss" scoped>
 section {
-  margin: 4em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.2);
   text-align: center;
   overflow: hidden;
 

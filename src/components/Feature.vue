@@ -1,6 +1,6 @@
 <template>
-  <section class="future">
-    <article class="future__item" v-for="item in listItems" :key="item.id">
+  <section id="feature" class="feature">
+    <article class="feature__item" v-for="item in listItems" :key="item.id">
       <picture v-html="item.icon"></picture>
 
       <h3>{{ item.title }}</h3>
@@ -130,12 +130,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.future {
+.feature {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 4em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.2);
 
   &__item {
     border-radius: 25px;

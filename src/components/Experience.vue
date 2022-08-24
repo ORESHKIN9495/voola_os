@@ -1,5 +1,5 @@
 <template>
-  <section class="exp">
+  <section id="exp" class="exp">
     <h2>
       User experience
       <p style="margin-top: 20px; font-size: var(--scheme-xs); max-width: 812px">
@@ -31,8 +31,6 @@ export default {
   background-size: 650px;
   display: flex;
   flex-direction: column;
-  margin: 8em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
 
   @media only screen and (max-width: 920px) {
     background-position: center bottom;

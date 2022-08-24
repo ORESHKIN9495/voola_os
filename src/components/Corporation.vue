@@ -1,5 +1,5 @@
 <template>
-  <section class="corp">
+  <section id="corp" class="corp">
     <article class="corp__tittle">
       <h3>
         World-class mobile device management for corporations
@@ -58,8 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 .corp {
-  margin: 12em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.2);
   text-align: center;
 
   &__items {

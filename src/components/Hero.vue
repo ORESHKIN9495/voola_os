@@ -69,7 +69,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section>
+  <section id="hero">
     <div class="grid">
       <div class="grid__item" ref="a">
         <Device mirrorY />
