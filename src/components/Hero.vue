@@ -69,7 +69,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section style="margin: -112px 0 0">
+  <section style="margin: -112px auto 0">
     <div class="grid">
       <div class="grid__item" ref="a">
         <Device mirrorY />
