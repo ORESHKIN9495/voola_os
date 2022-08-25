@@ -7,17 +7,17 @@
       </h3>
 
       <picture>
-        <source media="(max-width: 768px)" srcset="../assets/Rectangle 1057.png" />
-        <source media="(min-width: 769px)" srcset="../assets/Rectangle 1057@2x.png" />
-        <img src="../assets/Rectangle 1057@2x.png" alt="" />
+        <source media="(max-width: 768px)" srcset="../assets/rectangle-1057.png" />
+        <source media="(min-width: 769px)" srcset="../assets/rectangle-1057@2x.png" />
+        <img src="../assets/rectangle-1057@2x.png" alt="" />
       </picture>
     </article>
 
     <article class="more__item">
       <picture>
-        <source media="(max-width: 768px)" srcset="../assets/Rectangle vert.png" />
-        <source media="(min-width: 769px)" srcset="../assets/Rectangle vert@2x.png" />
-        <img class="rotate" src="../assets/Rectangle vert@2x.png" alt="" />
+        <source media="(max-width: 768px)" srcset="../assets/rectangle-vert.png" />
+        <source media="(min-width: 769px)" srcset="../assets/rectangle-vert@2x.png" />
+        <img class="rotate" src="../assets/rectangle-vert@2x.png" alt="" />
       </picture>
 
       <h3>
@@ -33,17 +33,17 @@
       </h3>
 
       <picture>
-        <source media="(max-width: 768px)" srcset="../assets/Rectangle vert.png" />
-        <source media="(min-width: 769px)" srcset="../assets/Rectangle vert@2x.png" />
-        <img class="rotate" src="../assets/Rectangle vert@2x.png" alt="" />
+        <source media="(max-width: 768px)" srcset="../assets/rectangle-vert.png" />
+        <source media="(min-width: 769px)" srcset="../assets/rectangle-vert@2x.png" />
+        <img class="rotate" src="../assets/rectangle-vert@2x.png" alt="" />
       </picture>
     </article>
 
     <article class="more__item">
       <picture>
-        <source media="(max-width: 768px)" srcset="../assets/Rectangle 1057.png" />
-        <source media="(min-width: 769px)" srcset="../assets/Rectangle 1057@2x.png" />
-        <img src="../assets/Rectangle 1057@2x.png" alt="" />
+        <source media="(max-width: 768px)" srcset="../assets/rectangle-1057.png" />
+        <source media="(min-width: 769px)" srcset="../assets/rectangle-1057@2x.png" />
+        <img src="../assets/rectangle-1057@2x.png" alt="" />
       </picture>
 
       <h3>

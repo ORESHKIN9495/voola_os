@@ -1,9 +1,9 @@
 <template>
   <section id="calling" class="calling">
     <picture>
-      <source media="(max-width: 768px)" srcset="../assets/Group 1275.png" />
-      <source media="(min-width: 769px)" srcset="../assets/Group 1275@2x.png" />
-      <img src="../assets/Group 1275@2x.png" alt="" />
+      <source media="(max-width: 768px)" srcset="../assets/group-1275.png" />
+      <source media="(min-width: 769px)" srcset="../assets/group-1275@2x.png" />
+      <img src="../assets/group-1275@2x.png" alt="" />
     </picture>
 
     <h2>

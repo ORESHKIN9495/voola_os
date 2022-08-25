@@ -33,13 +33,15 @@ let show = ref(false)
 
 onMounted(() => {
   const scrollTop = () => window.pageYOffset || document.documentElement.scrollTop
-  const lastScroll = 1500
+  const lastScroll = 1200
+  const preScroll = 200
 
   window.addEventListener('scroll', () => {
     if (scrollTop() > lastScroll) {
       a.value.style.transform = `translateY(0)`
     } else if (scrollTop() < lastScroll) {
       a.value.style.transform = `translateY(-200px)`
+
       show.value = false
     }
   })
@@ -50,11 +52,11 @@ onMounted(() => {
 .header {
   box-shadow: 0 15px 15px 5px var(--scheme-v6);
   background: var(--scheme-v1);
+  margin: 0;
   max-width: 100%;
   position: sticky;
-  transform: translateY(-200px);
-  margin: 0;
   padding: 0;
+  transform: translateY(-200px);
   top: 0;
   transition: transform 0.5s ease-in-out;
   z-index: 1;

@@ -7,9 +7,9 @@ defineProps({
 
 <template>
   <picture>
-    <source media="(max-width: 768px)" srcset="../assets/[Mockup]-iPhone.png" />
-    <source media="(min-width: 769px)" srcset="../assets/[Mockup]-iPhone@2x.png" />
-    <img :class="[mirrorY ? 'mirrorY' : '', size ? 'size' : '']" src="../assets/[Mockup]-iPhone@2x.png" alt="" />
+    <source media="(max-width: 768px)" srcset="../assets/mockup-iphone.png" />
+    <source media="(min-width: 769px)" srcset="../assets/mockup-iphone@2x.png" />
+    <img :class="[mirrorY ? 'mirrorY' : '', size ? 'size' : '']" src="../assets/mockup-iphone@2x.png" alt="" />
   </picture>
 </template>
 

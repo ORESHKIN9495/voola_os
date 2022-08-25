@@ -52,8 +52,8 @@ const appsList = ref([
   overflow: hidden;
 
   &::before {
-    background-image: -webkit-image-set(url('../assets/Vector.png') 1x, url('../assets/Vector@2x.png') 2x);
-    background-image: image-set(url('../assets/Vector.png') 1x, url('../assets/Vector@2x.png') 2x);
+    background-image: -webkit-image-set(url('../assets/vector.png') 1x, url('../assets/vector@2x.png') 2x);
+    background-image: image-set(url('../assets/vector.png') 1x, url('../assets/vector@2x.png') 2x);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;

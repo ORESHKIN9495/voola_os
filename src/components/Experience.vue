@@ -18,8 +18,8 @@ import ExperienceList from './Experience-list.vue'
 
 <style lang="scss" scoped>
 .exp {
-  background-image: image-set(url('../assets/Group 1273@2x.png') 2x, url('../assets/Group 1273.png') 1x);
-  background-image: -webkit-image-set(url('../assets/Group 1273@2x.png') 2x, url('../assets/Group 1273.png') 1x);
+  background-image: image-set(url('../assets/group-1273@2x.png') 2x, url('../assets/group-1273.png') 1x);
+  background-image: -webkit-image-set(url('../assets/group-1273@2x.png') 2x, url('../assets/group-1273.png') 1x);
   background-repeat: no-repeat;
   background-position: left;
   display: flex;

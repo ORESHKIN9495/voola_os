@@ -19,8 +19,8 @@ import ApiList from './Api-list.vue'
 
 <style lang="scss" scoped>
 .api {
-  background-image: image-set(url('../assets/Group 1272@2x.png') 2x, url('../assets/Group 1272.png') 1x);
-  background-image: -webkit-image-set(url('../assets/Group 1272@2x.png') 2x, url('../assets/Group 1272.png') 1x);
+  background-image: image-set(url('../assets/group-1272@2x.png') 2x, url('../assets/group-1272.png') 1x);
+  background-image: -webkit-image-set(url('../assets/group-1272@2x.png') 2x, url('../assets/group-1272.png') 1x);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 600px;
