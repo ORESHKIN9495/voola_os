@@ -23,7 +23,7 @@
 import { ref, onMounted } from 'vue'
 import Popup from './Popup.vue'
 
-const a = ref(null)
+const a = ref()
 
 const close = () => {
   show.value = false
