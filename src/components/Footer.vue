@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <p>2022.Voola</p>
-    <p>design by <a style="color: var(--scheme-v3); text-decoration: underline" href="/">roobinium.io</a></p>
+    <p>design by <a style="color: var(--scheme-v3); text-decoration: underline" href="https://roobinium.io/">roobinium.io</a></p>
   </section>
 </template>
 

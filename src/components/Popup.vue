@@ -4,7 +4,7 @@
       <path d="m1.833 1.833 12.334 12.333M14.167 1.833 1.833 14.166" stroke="#4E94D7" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
 
-    <a v-for="item in titles" :key="item.id" @click="click(item.id, $event)">{{ item.title }}</a>
+    <a class="indexId" :name="item.id" v-for="item in titles" :key="item.id" v-scroll-to="'#' + item.id" @click="isActive($event)">{{ item.title }}</a>
   </section>
 </template>
 
@@ -12,8 +12,6 @@
 import { ref } from 'vue'
 
 const emit = defineEmits(['close'])
-
-const currentIndex = ref(null)
 
 const titles = ref([
   {
@@ -78,22 +76,14 @@ const titles = ref([
   },
 ])
 
-const click = (id, e) => {
-  const comp = ref([document.getElementById(id)])
-
-  if (currentIndex.value !== id) {
-    currentIndex.value = id
-
-    comp.value.forEach((el) => {
-      const ident = el.id
-
-      if (currentIndex.value == ident) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
-    })
-  } else {
-    currentIndex.value = null
-  }
+const isActive = (e) => {
+  document.querySelectorAll('.indexId').forEach((el) => {
+    if (e.target.name === el.name) {
+      el.classList.add('isActive')
+    } else {
+      el.classList.remove('isActive')
+    }
+  })
 }
 </script>
 
@@ -107,7 +97,6 @@ const click = (id, e) => {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 10;
   padding: 80px 40px 0;
   height: 900px;
   margin: 0;
@@ -120,7 +109,6 @@ const click = (id, e) => {
     position: absolute;
     right: 45px;
     top: 45px;
-    z-index: 11;
   }
 
   a {
@@ -128,10 +116,10 @@ const click = (id, e) => {
     cursor: pointer;
     font-size: 24px;
     margin-bottom: 10px;
+  }
 
-    &:hover {
-      color: #000;
-    }
+  .isActive {
+    color: var(--scheme-v2);
   }
 
   @media only screen and (max-width: 920px) {
