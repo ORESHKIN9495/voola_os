@@ -2,6 +2,7 @@
 defineProps({
   size: Boolean,
   sizeL: Boolean,
+  pos: Boolean,
 })
 </script>
 

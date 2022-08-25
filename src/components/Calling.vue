@@ -64,10 +64,34 @@ const itemList = ref([
     gap: 20px;
   }
 
+  picture {
+    align-items: center;
+    border-radius: 100%;
+    background: var(--scheme-v7);
+    display: flex;
+    height: 550px;
+    justify-content: center;
+    padding: 60px;
+    width: 550px;
+  }
+
   @media only screen and (max-width: 1020px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
+
+    & {
+      picture {
+        align-items: center;
+        border-radius: 100%;
+        background: none;
+        display: inherit;
+        height: 100%;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+      }
+    }
   }
 }
 </style>
