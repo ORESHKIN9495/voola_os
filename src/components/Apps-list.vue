@@ -47,15 +47,16 @@ const appsList = ref([
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 120px;
+  gap: calc(var(--scheme-gap) * 3);
   justify-content: center;
   overflow: hidden;
+  text-align: center;
 
   &::before {
     background-image: -webkit-image-set(url('../assets/vector.png') 1x, url('../assets/vector@2x.png') 2x);
     background-image: image-set(url('../assets/vector.png') 1x, url('../assets/vector@2x.png') 2x);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: 100%;
     content: '';
     height: 100%;
@@ -64,7 +65,7 @@ const appsList = ref([
     width: 100%;
     z-index: -1;
 
-    @media only screen and (max-width: 920px) {
+    @media only screen and (max-width: 1009px) {
       transform: rotate(-90deg);
       width: 1270px;
     }
@@ -72,17 +73,14 @@ const appsList = ref([
 
   article {
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 380px;
-    text-align: center;
+    display: grid;
+    justify-items: center;
+    max-width: 420px;
 
     picture {
-      align-items: center;
       background: var(--scheme-v4);
       border-radius: 35px;
-      display: flex;
-      justify-content: center;
+      display: grid;
       margin-bottom: 20px;
       padding: 20px;
     }

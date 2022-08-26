@@ -60,7 +60,7 @@
 .more {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: calc(var(--scheme-gap) / 1.5);
 
   img {
     border-radius: 25px;
@@ -85,7 +85,7 @@
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: var(--scheme-gap);
 
     &:first-child {
       grid-area: 1/1/2/3;

@@ -49,7 +49,7 @@ const itemList = ref([
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--scheme-gap);
   margin: 8em auto 0;
   max-width: calc(var(--scheme-max-width) / 1.25);
 
@@ -61,7 +61,7 @@ const itemList = ref([
     align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: var(--scheme-gap);
   }
 
   picture {

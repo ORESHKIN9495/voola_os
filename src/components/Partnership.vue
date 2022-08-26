@@ -29,7 +29,7 @@ import Partnercard from './Partnercard.vue'
 <style lang="scss" scoped>
 .partnership {
   display: grid;
-  gap: 20px;
+  gap: var(--scheme-gap);
   grid-template-columns: repeat(2, 1fr);
 
   &__link {

@@ -1,13 +1,15 @@
 <template>
   <section id="models" class="models">
-    <h2 style="margin: 0; font-weight: 400">
-      VOOLA OS
-
-      <p style="font-size: 20px">is compatible with these devices</p>
-    </h2>
-
     <article>
-      <p v-for="item in models" :key="item.id" style="margin: 10px 0">{{ item.title }}</p>
+      <h2 style="margin: 0; font-weight: 400">
+        VOOLA OS
+
+        <p style="font-size: 20px">is compatible with these devices</p>
+      </h2>
+
+      <span>
+        <p v-for="item in models" :key="item.id" style="margin: 10px 0">{{ item.title }}</p>
+      </span>
     </article>
   </section>
 </template>
@@ -44,19 +46,21 @@ const models = ref([
 
 <style lang="scss" scoped>
 .models {
-  align-items: center;
-  background: linear-gradient(207deg, rgba(224, 241, 237, 1) 0%, rgba(246, 250, 232, 1) 100%);
-  border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-items: center;
-  padding: 60px 20px;
+  article {
+    align-items: center;
+    background: linear-gradient(207deg, rgba(224, 241, 237, 1) 0%, rgba(246, 250, 232, 1) 100%);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--scheme-gap);
+    justify-items: center;
+    padding: 4em 2em;
 
-  @media only screen and (max-width: 920px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: flex-start;
+    @media only screen and (max-width: 920px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      text-align: center;
+    }
   }
 }
 </style>

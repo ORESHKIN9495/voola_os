@@ -61,7 +61,7 @@ const corpItems = ref([
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--scheme-gap);
     margin: 4em 0;
 
     @media only screen and (max-width: 920px) {

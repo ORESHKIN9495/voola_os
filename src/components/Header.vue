@@ -62,15 +62,16 @@ onMounted(() => {
   z-index: 1;
 
   &__wrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    padding: 40px;
+    padding: 20px 40px;
     position: relative;
 
     picture {
       img {
         max-width: 80px;
+        vertical-align: middle;
       }
     }
 

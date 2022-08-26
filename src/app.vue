@@ -122,7 +122,7 @@ i {
   --scheme-min-height: 568px; // 5 SE
 
   // project default template gap
-  --scheme-gap: 20px;
+  --scheme-gap: 2em;
 
   // project ex. header & footer height
   --scheme-offset: 100px;
@@ -173,7 +173,7 @@ section {
 }
 
 section {
-  padding: 0 2rem;
+  padding: 0 2em;
 }
 
 h1,

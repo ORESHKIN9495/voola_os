@@ -45,20 +45,22 @@ const appsList = ref([
 <style lang="scss" scoped>
 .api-list {
   display: grid;
-  grid-template-columns: repeat(2, 350px);
-  gap: 40px;
-  margin-top: 80px;
+  grid-template-columns: repeat(2, 380px);
   padding: 0;
+  gap: var(--scheme-gap);
+
+  article {
+    align-items: center;
+    display: grid;
+    justify-items: flex-start;
+  }
 
   picture {
-    align-items: center;
     background: var(--scheme-v4);
     border-radius: 35px;
-    display: flex;
-    justify-content: center;
+    display: grid;
     margin-bottom: 20px;
     padding: 20px;
-    width: 70px;
   }
 
   @media only screen and (max-width: 920px) {

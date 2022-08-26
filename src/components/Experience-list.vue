@@ -40,21 +40,25 @@ const appsList = ref([
 
 <style lang="scss" scoped>
 .exp-list {
-  padding: 0;
+  justify-items: flex-end;
   display: grid;
-  grid-template-columns: repeat(2, 395px);
-  gap: 20px;
+  grid-template-columns: repeat(2, 380px);
+  padding: 0;
+  gap: var(--scheme-gap);
   margin: 0;
 
-  picture {
+  article {
     align-items: center;
+    display: grid;
+    justify-items: flex-start;
+  }
+
+  picture {
     background: var(--scheme-v4);
     border-radius: 35px;
-    display: flex;
-    justify-content: center;
+    display: grid;
     margin-bottom: 20px;
     padding: 20px;
-    width: 70px;
   }
 
   @media only screen and (max-width: 920px) {

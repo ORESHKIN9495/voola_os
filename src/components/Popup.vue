@@ -94,21 +94,21 @@ const isActive = (e) => {
   border-radius: 0 0 16px 16px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 80px 40px 0;
-  height: 900px;
   margin: 0;
-  width: 400px;
+  height: 900px;
   overflow-y: auto;
+  position: absolute;
+  padding: 40px;
+  right: 0;
   scrollbar-width: none;
+  top: 0;
+  width: 400px;
 
   svg {
     cursor: pointer;
     position: absolute;
     right: 45px;
-    top: 45px;
+    top: 25px;
   }
 
   a {

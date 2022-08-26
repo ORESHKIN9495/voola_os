@@ -1,9 +1,9 @@
 <template>
   <section id="feature" class="feature">
-    <article class="feature__item" v-for="item in listItems" :key="item.id">
+    <article v-for="item in listItems" :key="item.id">
       <picture v-html="item.icon"></picture>
 
-      <h3>{{ item.title }}</h3>
+      <h3 style="margin-top: 20px">{{ item.title }}</h3>
 
       <p>{{ item.body }}</p>
 
@@ -129,47 +129,48 @@ const listItems = ref([
 .feature {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: calc(var(--scheme-gap) / 1.5);
 
-  &__item {
+  article {
+    align-items: flex-start;
     border-radius: 25px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: var(--scheme-gap);
+    justify-items: flex-start;
     padding: 2em;
 
-    h3 {
-      margin-top: 20px;
-    }
-
     picture {
-      align-items: center;
       background: var(--scheme-v1);
-      border-radius: 55px;
-      display: flex;
-      height: 60px;
-      justify-content: center;
-      margin: 0 0 auto;
-      width: 60px;
+      border-radius: 35px;
+      display: grid;
+      margin-bottom: 20px;
+      padding: 20px;
     }
 
     &:first-child {
       background: hsl(263, 100%, 96%);
       grid-area: 1 / 1 / 2 / 2;
+
+      picture {
+        padding: 18px 22px;
+      }
     }
 
     &:nth-child(2) {
       background: rgba(255, 248, 243, 0.98);
       grid-area: 1 / 2 / 2 / 4;
     }
+
     &:nth-child(3) {
       background: hsl(161, 85%, 95%);
-
       grid-area: 2 / 2 / 3 / 3;
     }
+
     &:nth-child(4) {
       background: rgba(245, 252, 253, 0.98);
       grid-area: 2 / 3 / 3 / 4;
     }
+
     &:nth-child(5) {
       background: rgba(237, 240, 255, 0.98);
       grid-area: 3 / 2 / 4 / 4;
@@ -178,14 +179,14 @@ const listItems = ref([
     &:last-child {
       background: rgba(255, 248, 243, 0.98);
       grid-area: 2 / 1 / 4 / 2;
+      grid-template-rows: 1fr;
     }
   }
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
 
-    &__item {
+    article {
       &:nth-child(1n) {
         grid-area: unset;
       }

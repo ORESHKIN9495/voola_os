@@ -59,7 +59,6 @@ import DeviceVert from './DeviceVert.vue'
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
-  max-width: calc(var(--scheme-max-width) / 1.5);
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;

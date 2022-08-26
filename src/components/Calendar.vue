@@ -34,7 +34,7 @@ const itemList = ref([
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--scheme-gap);
   justify-items: flex-end;
 
   picture {

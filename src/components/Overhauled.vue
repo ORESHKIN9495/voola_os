@@ -54,7 +54,7 @@ const itemList = ref([
     align-items: baseline;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: var(--scheme-gap);
 
     @media only screen and (max-width: 1020px) {
       grid-template-columns: 1fr;

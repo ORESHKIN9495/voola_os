@@ -43,7 +43,7 @@ const itemList = ref([
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+    gap: var(--scheme-gap);
 
     picture {
       align-items: center;
