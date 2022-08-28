@@ -1,5 +1,5 @@
 <template>
-  <section class="exp-list">
+  <section>
     <article v-for="item in appsList" :key="item.id">
       <picture v-html="item.icon"></picture>
 
@@ -39,7 +39,7 @@ const appsList = ref([
 </script>
 
 <style lang="scss" scoped>
-.exp-list {
+section {
   justify-items: flex-end;
   display: grid;
   grid-template-columns: repeat(2, 380px);

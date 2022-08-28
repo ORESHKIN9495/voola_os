@@ -8,13 +8,13 @@
       </h3>
     </h2>
 
-    <DeviceVert size />
+    <span><Device /></span>
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import DeviceVert from './DeviceVert.vue'
+import Device from './Device.vue'
 
 const itemList = ref([
   {
@@ -37,33 +37,26 @@ const itemList = ref([
   gap: var(--scheme-gap);
   justify-items: flex-end;
 
-  picture {
+  span {
     align-items: center;
     border-radius: 100%;
     background: var(--scheme-v7);
     display: flex;
-    height: 550px;
     justify-content: center;
-    padding: 60px;
-    width: 550px;
+    height: 645px;
+    width: 645px;
   }
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: 1120px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
 
-    & {
-      picture {
-        align-items: center;
-        border-radius: 100%;
-        background: none;
-        display: inherit;
-        height: 100%;
-        justify-content: center;
-        padding: 0;
-        width: 100%;
-      }
+    span {
+      background: inherit;
+      display: block;
+      height: 100%;
+      width: 100%;
     }
   }
 }

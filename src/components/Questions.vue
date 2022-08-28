@@ -1,6 +1,6 @@
 <template>
-  <section class="questions">
-    <article class="questions__item" v-for="item in listItems" :key="item.id" @click.prevent="toggle(item.id)">
+  <section>
+    <article v-for="item in listItems" :key="item.id" @click.prevent="toggle(item.id)">
       <p>
         {{ item.title }}
 
@@ -66,12 +66,12 @@ const toggle = (id) => {
 </script>
 
 <style lang="scss" scoped>
-.questions {
+section {
   margin: 0;
   max-width: 800px;
   padding: 0;
 
-  &__item {
+  article {
     background: var(--scheme-v1);
     border: 1px solid var(--scheme-v4);
     box-shadow: 0 5px 10px 5px var(--scheme-v6);

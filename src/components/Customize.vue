@@ -1,8 +1,10 @@
 <template>
   <section id="customize" class="customize">
-    <DeviceVert />
+    <article class="customize__item">
+      <Device vert />
+    </article>
 
-    <article>
+    <article class="customize__item">
       <h2>Customize to your needs</h2>
       <h3>Features</h3>
       <p>
@@ -12,7 +14,7 @@
       </p>
     </article>
 
-    <article>
+    <article class="customize__item">
       <h3>Dedicated device mode</h3>
       <p>
         Volla OS is smart at heart, but also a great companion for single-purpose devices designet to handle a few functions really well.<br /><br />
@@ -21,11 +23,15 @@
       </p>
     </article>
 
-    <DeviceVert />
+    <article class="customize__item">
+      <Device vert />
+    </article>
 
-    <DeviceVert />
+    <article class="customize__item">
+      <Device vert />
+    </article>
 
-    <article>
+    <article class="customize__item">
       <h3>Hardware</h3>
       <p>
         Volla OS has been ported to almost <span> a hundred different devices*</span> with new devices added regularly using our
@@ -35,7 +41,7 @@
       </p>
     </article>
 
-    <article>
+    <article class="customize__item">
       <h3>User Interface</h3>
       <p>
         VoolaOS has been built ground-up to scale to different from factors and input styles. Sub-pixel scaling support means Volla OS works beautifully on any display size, from
@@ -46,43 +52,50 @@
       </p>
     </article>
 
-    <DeviceVert />
+    <article class="customize__item">
+      <Device vert />
+    </article>
   </section>
 </template>
 
 <script setup>
-import DeviceVert from './DeviceVert.vue'
+import Device from './Device.vue'
 </script>
 
 <style lang="scss" scoped>
 .customize {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--scheme-gap);
+  grid-row-gap: calc(var(--scheme-gap) * 2);
+  justify-items: flex-start;
+
+  span {
+    color: var(--scheme-v3);
+  }
+
+  &__item {
+    &:nth-child(4) {
+      justify-self: flex-end;
+    }
+
+    &:nth-child(8) {
+      justify-self: flex-end;
+    }
+  }
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
-    picture {
-      &:nth-child(1) {
-        grid-area: 2;
+    &__item {
+      &:nth-child(2) {
+        grid-area: 1;
       }
-      &:nth-child(4) {
-        grid-area: 4;
-      }
-      &:nth-child(5) {
-        grid-area: 6;
+
+      &:nth-child(6) {
+        grid-area: 5;
       }
     }
-  }
-
-  picture:nth-child(2n + 2) {
-    text-align: right;
-  }
-
-  span {
-    color: var(--scheme-v3);
   }
 }
 </style>

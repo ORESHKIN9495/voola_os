@@ -1,6 +1,6 @@
 <template>
   <section ref="a" class="header">
-    <article class="header__wrapper">
+    <article>
       <picture>
         <source media="(max-width: 768px)" srcset="../assets/Vector.png" />
         <source media="(min-width: 769px)" srcset="../assets/Vector@2x.png" />
@@ -52,31 +52,29 @@ onMounted(() => {
 .header {
   box-shadow: 0 15px 15px 5px var(--scheme-v6);
   background: var(--scheme-v1);
-  margin: 0;
   max-width: 100%;
   position: sticky;
   padding: 0;
   transform: translateY(-200px);
   top: 0;
   transition: transform 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 9;
 
-  &__wrapper {
-    align-items: center;
+  article {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
     position: relative;
 
-    picture {
-      img {
-        max-width: 80px;
-        vertical-align: middle;
-      }
+    img {
+      max-width: 80px;
+      vertical-align: middle;
     }
 
     svg {
       cursor: pointer;
+      vertical-align: middle;
     }
 
     @media only screen and (max-width: 920px) {

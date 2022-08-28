@@ -1,5 +1,5 @@
 <template>
-  <section class="api-list">
+  <section>
     <article v-for="item in appsList" :key="item.id">
       <picture v-html="item.icon"></picture>
 
@@ -43,7 +43,7 @@ const appsList = ref([
 </script>
 
 <style lang="scss" scoped>
-.api-list {
+section {
   display: grid;
   grid-template-columns: repeat(2, 380px);
   padding: 0;

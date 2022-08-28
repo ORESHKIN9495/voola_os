@@ -1,5 +1,5 @@
 <template>
-  <section class="dev">
+  <section>
     <article>
       <h2 style="font-weight: 400; max-width: 700px">
         Rebooted developer experience
@@ -16,7 +16,7 @@
 <script></script>
 
 <style lang="scss" scoped>
-.dev {
+section {
   article {
     background: linear-gradient(207deg, rgba(236, 243, 248, 1) 0%, rgba(248, 249, 231, 1) 100%);
     border-radius: 20px;

@@ -1,5 +1,5 @@
 <template>
-  <section id="models" class="models">
+  <section id="models">
     <article>
       <h2 style="margin: 0; font-weight: 400">
         VOOLA OS
@@ -45,7 +45,7 @@ const models = ref([
 </script>
 
 <style lang="scss" scoped>
-.models {
+section {
   article {
     align-items: center;
     background: linear-gradient(207deg, rgba(224, 241, 237, 1) 0%, rgba(246, 250, 232, 1) 100%);

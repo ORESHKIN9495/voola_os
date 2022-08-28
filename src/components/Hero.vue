@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import Device from '../components/DeviceMockup.vue'
+import Device from '../components/Device.vue'
 
 import gsap from 'gsap'
 
@@ -14,7 +14,7 @@ onMounted(() => {
   gsap.fromTo(
     a.value,
     {
-      x: '-100%',
+      x: '-200%',
     },
     {
       duration: 1.5,
@@ -47,7 +47,7 @@ onMounted(() => {
     gsap.fromTo(
       d.value,
       {
-        x: '100%',
+        x: '200%',
       },
       {
         duration: 1.5,
@@ -72,7 +72,7 @@ onMounted(() => {
   <section style="margin: -112px auto 0">
     <div class="grid">
       <div class="grid__item" ref="a">
-        <Device mirrorY />
+        <Device hor />
       </div>
 
       <div class="grid__item">
@@ -104,7 +104,7 @@ onMounted(() => {
       </div>
 
       <div class="grid__item" ref="d">
-        <Device mirrorY />
+        <Device hor />
       </div>
     </div>
   </section>
@@ -146,7 +146,7 @@ onMounted(() => {
     }
   }
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: 1126px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 

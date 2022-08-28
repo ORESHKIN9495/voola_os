@@ -1,5 +1,5 @@
 <template>
-  <section id="apps" class="apps">
+  <section id="apps">
     <article>
       <h3>
         Fourth generation security
@@ -11,7 +11,7 @@
       </h3>
     </article>
 
-    <article class="apps__screen">
+    <article>
       <picture>
         <source media="(max-width: 768px)" srcset="../assets/screen-s.png" />
         <source media="(min-width: 769px)" srcset="../assets/screen-s@2x.png" />
@@ -32,7 +32,7 @@
           Voola OS is compatible with the Android™ ecosystem, and so able to run Android apps and support Android device hardware. However, it’s fully independent, and not
           aderivative or a fork of the Android codebase.<br /><br />Voola licensees choose if they wish to use the Android compatibility part in the OS, or instead opt for fully
           native solutions.<br /><br />App support is also offered for other Linux-based systems through
-          <span style="color: var(--scheme-v3)">AppSupport for Linux Platforms</span> product.
+          <span style="color: var(--scheme-v3)">App Support for Linux Platforms</span> product.
         </p>
       </h3>
     </article>
@@ -42,7 +42,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.apps {
+section {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,8 +54,7 @@
     margin-top: 20px;
     max-width: 350px;
   }
-
-  &__screen {
+  article:nth-child(2) {
     align-items: flex-end;
     display: flex;
 

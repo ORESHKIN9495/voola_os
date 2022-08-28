@@ -1,5 +1,5 @@
 <template>
-  <section id="email" class="calendar">
+  <section id="email" class="email">
     <h2>Email</h2>
 
     <article>
@@ -8,7 +8,7 @@
         <p style="font-size: var(--scheme-xs); margin: 10px 0">The Voola X email viewer has been upgraded to a new engine.</p>
       </h3>
 
-      <DeviceMockup size />
+      <span><Device hor /></span>
 
       <h3 style="font-size: 20px; margin-top: 40px">
         Automatic replies
@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import DeviceMockup from './DeviceMockup.vue'
+import Device from './Device.vue'
 import { ref } from 'vue'
 
 const itemList = ref([
@@ -36,41 +36,36 @@ const itemList = ref([
 </script>
 
 <style lang="scss" scoped>
-.calendar {
+.email {
   text-align: center;
 
   article {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     gap: var(--scheme-gap);
 
-    picture {
+    span {
       align-items: center;
       border-radius: 100%;
       background: var(--scheme-v7);
       display: flex;
-      height: 550px;
       justify-content: center;
-      padding: 60px;
-      width: 550px;
+      height: 645px;
+      width: 645px;
     }
 
-    @media only screen and (max-width: 920px) {
+    @media only screen and (max-width: 1120px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
 
-      & {
-        picture {
-          align-items: center;
-          border-radius: 100%;
-          background: none;
-          display: inherit;
-          height: 100%;
-          justify-content: center;
-          padding: 0;
-          width: 100%;
-        }
+      justify-items: center;
+
+      span {
+        background: inherit;
+        display: block;
+        height: 100%;
+        width: 100%;
       }
     }
   }

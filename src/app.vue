@@ -106,6 +106,7 @@ i {
   --scheme-v5: #62686d;
   --scheme-v6: #00000008;
   --scheme-v7: #4e94d708;
+  --scheme-shadow: #5a5a5a47;
 
   // project font-family
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;

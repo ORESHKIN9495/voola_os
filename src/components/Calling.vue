@@ -1,27 +1,30 @@
 <template>
-  <section id="calling" class="calling">
-    <picture>
-      <source media="(max-width: 768px)" srcset="../assets/group-1275.png" />
-      <source media="(min-width: 769px)" srcset="../assets/group-1275@2x.png" />
-      <img src="../assets/group-1275@2x.png" alt="" />
-    </picture>
+  <section id="calling" class="calling" ref="a">
+    <div class="calling__items">
+      <span><Device sizeS /></span>
+      <span ref="b"><Device sizeS /></span>
+      <span ref="c"><Device sizeS /></span>
+    </div>
 
-    <h2>
-      Calling
+    <div class="calling__item">
+      <h2>Calling</h2>
 
-      <span>
-        <h3 v-for="item in itemList" :key="item.id" style="font-size: 20px; margin-top: 40px">
+      <span
+        ><h3 v-for="item in itemList" :key="item.id" style="font-size: 20px; margin-top: 40px">
           {{ item.title }}
           <p style="font-size: var(--scheme-xs); margin: 10px 0">{{ item.body }}</p>
-        </h3>
-      </span>
-    </h2>
+        </h3></span
+      >
+    </div>
   </section>
 </template>
 
 <script setup>
-import DeviceVert from './DeviceVert.vue'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import Device from './Device.vue'
+const a = ref('a')
+const b = ref('b')
+const c = ref('c')
 
 const itemList = ref([
   {
@@ -42,55 +45,90 @@ const itemList = ref([
     body: 'The full-screen call ending dialog has been replaced with a smaller popup.',
   },
 ])
+
+onMounted(() => {
+  const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 1200
+  const move = window.addEventListener('scroll', (e) => {
+    if (window.pageYOffset >= offsetEl) {
+      b.value.classList.add('child-1')
+      c.value.classList.add('child-2')
+    } else {
+      window.removeEventListener('scroll', move)
+      b.value.classList.remove('child-1')
+      c.value.classList.remove('child-2')
+    }
+  })
+})
 </script>
 
 <style lang="scss" scoped>
 .calling {
-  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
-  margin: 8em auto 0;
-  max-width: calc(var(--scheme-max-width) / 1.25);
 
-  img {
-    max-width: 450px;
+  &__items {
+    position: relative;
+    width: 100%;
+    padding: 180px;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
 
-  span {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--scheme-gap);
+  &__item {
+    span {
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--scheme-gap);
+    }
   }
 
-  picture {
-    align-items: center;
-    border-radius: 100%;
-    background: var(--scheme-v7);
-    display: flex;
-    height: 550px;
-    justify-content: center;
-    padding: 60px;
-    width: 550px;
-  }
-
-  @media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 1120px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     justify-items: center;
 
-    & {
-      picture {
-        align-items: center;
-        border-radius: 100%;
-        background: none;
-        display: inherit;
-        height: 100%;
-        justify-content: center;
-        padding: 0;
-        width: 100%;
-      }
+    &__items {
+      display: none;
+    }
+  }
+}
+
+.child-1 {
+  transform-origin: right bottom;
+  z-index: 1;
+  animation-name: child-1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+
+  @keyframes child-1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.child-2 {
+  transform-origin: right bottom;
+  animation-name: child-2;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+
+  @keyframes child-2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
     }
   }
 }

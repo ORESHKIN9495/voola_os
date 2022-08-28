@@ -1,5 +1,5 @@
 <template>
-  <section id="over" class="overhauled">
+  <section id="over">
     <h2>
       Overhauled Browser
       <p style="font-size: var(--scheme-xs); margin-top: 20px">
@@ -10,11 +10,11 @@
 
     <article>
       <div v-for="item in itemList" :key="item.id">
-        <DeviceVert v-if="item.id == 2" size />
-        <DeviceVert v-else-if="item.id == 3" size-l />
-        <DeviceVert v-else />
+        <Device v-if="item.id == 2" sizeM />
+        <Device v-else-if="item.id == 3" sizeL />
+        <Device v-else />
 
-        <h3>
+        <h3 style="margin: var(--scheme-gap)">
           {{ item.title }}
           <p style="font-size: var(--scheme-xs); margin-top: 20px">{{ item.body }}</p>
         </h3>
@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import DeviceVert from './DeviceVert.vue'
+import Device from './Device.vue'
 import { ref } from 'vue'
 
 const itemList = ref([
@@ -47,7 +47,7 @@ const itemList = ref([
 </script>
 
 <style lang="scss" scoped>
-.overhauled {
+section {
   text-align: center;
 
   article {
@@ -55,6 +55,7 @@ const itemList = ref([
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--scheme-gap);
+    margin: var(--scheme-gap) 0;
 
     @media only screen and (max-width: 1020px) {
       grid-template-columns: 1fr;

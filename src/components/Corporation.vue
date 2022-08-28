@@ -1,22 +1,21 @@
 <template>
-  <section id="corp" class="corp">
-    <article class="corp__tittle">
-      <h3>
-        World-class mobile device management for corporations
+  <section id="corp">
+    <h3>
+      World-class mobile device management for corporations
 
-        <p style="max-width: 1125px">
-          Mobile device management (MDM) support in Voola 2 is designed to meet even the most demanding corporate needs with APIs to remotely set up devices, provision ssettigs,
-          define policies, and manage installed software, Monitor data, call, and SMS statistivs, publish remote notifications, and define call and SMS filters. And much more.
-        </p>
-      </h3>
-    </article>
+      <p style="max-width: 1125px">
+        Mobile device management (MDM) support in Voola 2 is designed to meet even the most demanding corporate needs with APIs to remotely set up devices, provision ssettigs,
+        define policies, and manage installed software, Monitor data, call, and SMS statistivs, publish remote notifications, and define call and SMS filters. And much more.
+      </p>
+    </h3>
 
-    <article class="corp__items">
-      <div class="corp__item" v-for="item in corpItems" :key="item.id">
-        <DeviceVert v-if="item.id == 2" size />
-        <DeviceVert v-else />
+    <article>
+      <div v-for="item in corpItems" :key="item.id">
+        <Device v-if="item.id == 2" vert sizeM />
 
-        <h3>
+        <Device v-else vert />
+
+        <h3 style="margin: var(--scheme-gap)">
           {{ item.tittle }}
           <p style="max-width: 355px">{{ item.descr }}</p>
         </h3>
@@ -26,7 +25,7 @@
 </template>
 
 <script setup>
-import DeviceVert from './DeviceVert.vue'
+import Device from './Device.vue'
 import { ref } from 'vue'
 
 const corpItems = ref([
@@ -49,7 +48,7 @@ const corpItems = ref([
 </script>
 
 <style lang="scss" scoped>
-.corp {
+section {
   text-align: center;
 
   p {
@@ -57,12 +56,12 @@ const corpItems = ref([
     margin: 10px auto;
   }
 
-  &__items {
+  article {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--scheme-gap);
-    margin: 4em 0;
+    margin: var(--scheme-gap) 0;
 
     @media only screen and (max-width: 920px) {
       grid-template-columns: 1fr;

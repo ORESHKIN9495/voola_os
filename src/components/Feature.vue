@@ -1,5 +1,5 @@
 <template>
-  <section id="feature" class="feature">
+  <section id="feature">
     <article v-for="item in listItems" :key="item.id">
       <picture v-html="item.icon"></picture>
 
@@ -126,7 +126,7 @@ const listItems = ref([
 </script>
 
 <style lang="scss" scoped>
-.feature {
+section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: calc(var(--scheme-gap) / 1.5);

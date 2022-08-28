@@ -1,5 +1,5 @@
 <template>
-  <section class="apps-list">
+  <section>
     <article v-for="item in appsList" :key="item.id">
       <picture v-html="item.icon"></picture>
 
@@ -43,7 +43,7 @@ const appsList = ref([
 </script>
 
 <style lang="scss" scoped>
-.apps-list {
+section {
   align-items: center;
   display: flex;
   flex-wrap: wrap;

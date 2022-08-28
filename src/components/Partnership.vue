@@ -11,7 +11,7 @@
         <span>of seven possibilities UAB</span> .
       </p>
 
-      <div class="partnership__link">
+      <div>
         <i class="icon-2-user"></i>
         <div>
           <p>Business & partnership inquiries:</p>
@@ -32,7 +32,7 @@ import Partnercard from './Partnercard.vue'
   gap: var(--scheme-gap);
   grid-template-columns: repeat(2, 1fr);
 
-  &__link {
+  &:last-child {
     align-items: center;
     display: inline-flex;
     margin-top: 20px;

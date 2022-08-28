@@ -1,5 +1,5 @@
 <template>
-  <section id="infra" class="infra">
+  <section id="infra">
     <article>
       <h2 style="font-weight: 400; max-width: 915px">
         Infrastructure for your ecosystem
@@ -17,7 +17,7 @@
 <script></script>
 
 <style lang="scss" scoped>
-.infra {
+section {
   article {
     background: linear-gradient(207deg, rgba(252, 253, 232, 1) 0%, rgba(231, 215, 210, 1) 100%);
     border-radius: 20px;

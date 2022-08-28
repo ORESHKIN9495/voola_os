@@ -1,11 +1,11 @@
 <template>
-  <section class="card">
-    <article class="card__items">
+  <section>
+    <article>
       <button>Available on</button>
       <h3>App support</h3>
     </article>
 
-    <article class="card__item">
+    <article>
       <p>Also you can run Android™ apps with our dedicatod App Support solution</p>
       <button>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -21,7 +21,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.card {
+section {
   background: radial-gradient(circle, rgba(235, 242, 233, 1) 0%, rgba(169, 217, 234, 1) 100%);
   border-radius: 16px;
   display: flex;
@@ -31,7 +31,7 @@
   max-width: 580px;
   padding: 40px;
 
-  &__items {
+  article:first-child {
     button {
       background: var(--scheme-v1);
       border-radius: 10px;
@@ -41,7 +41,7 @@
     }
   }
 
-  &__item {
+  article:last-child {
     align-items: center;
     display: flex;
     justify-content: space-between;
