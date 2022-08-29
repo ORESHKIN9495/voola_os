@@ -65,7 +65,7 @@ onMounted(() => {
 .calling {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--scheme-gap);
+  gap: calc(var(--scheme-gap) * 4);
 
   &__items {
     position: relative;
