@@ -94,8 +94,8 @@ const isActive = (e) => {
   border-radius: 0 0 16px 16px;
   display: flex;
   flex-direction: column;
-  margin: 0;
   height: 900px;
+  margin: 0;
   overflow-y: auto;
   position: absolute;
   padding: 40px;

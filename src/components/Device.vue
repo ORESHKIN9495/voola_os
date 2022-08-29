@@ -27,8 +27,7 @@ defineProps({
   max-width: 195px;
   max-height: 395px;
   margin: 0 auto;
-  padding: 20px;
-  width: 100vw;
+  width: 100vh;
 
   &::before {
     background: linear-gradient(to top, #639bcd, #cae4fb);
@@ -94,22 +93,32 @@ defineProps({
   }
 
   &.block-v {
-    max-height: 196px;
-    max-width: 300px;
+    max-height: 395px;
+    max-width: 195px;
     margin: 0;
 
     &::before {
       content: none;
     }
+
+    @media only screen and (max-width: 510px) {
+      max-height: 326px;
+      max-width: 170px;
+    }
   }
 
   &.block-h {
-    max-height: 300px;
-    max-width: 196px;
+    max-height: 195px;
+    max-width: 395px;
     margin: 0;
 
     &::before {
       content: none;
+    }
+
+    @media only screen and (max-width: 510px) {
+      max-height: 170px;
+      max-width: 326px;
     }
   }
 }

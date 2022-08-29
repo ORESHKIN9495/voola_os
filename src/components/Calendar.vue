@@ -42,8 +42,8 @@ const itemList = ref([
     border-radius: 100%;
     background: var(--scheme-v7);
     display: flex;
-    justify-content: center;
     height: 645px;
+    justify-content: center;
     width: 645px;
   }
 

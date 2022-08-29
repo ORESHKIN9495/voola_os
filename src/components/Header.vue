@@ -50,8 +50,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .header {
-  box-shadow: 0 15px 15px 5px var(--scheme-v6);
   background: var(--scheme-v1);
+  box-shadow: 0 15px 15px 5px var(--scheme-v6);
   max-width: 100%;
   position: sticky;
   padding: 0;
@@ -61,8 +61,8 @@ onMounted(() => {
   z-index: 9;
 
   article {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     padding: 20px 40px;
     position: relative;

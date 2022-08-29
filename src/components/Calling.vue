@@ -1,9 +1,9 @@
 <template>
   <section id="calling" class="calling" ref="a">
     <div class="calling__items">
-      <span><Device sizeS /></span>
-      <span ref="b"><Device sizeS /></span>
-      <span ref="c"><Device sizeS /></span>
+      <span><Device /></span>
+      <span ref="b"><Device /></span>
+      <span ref="c"><Device /></span>
     </div>
 
     <div class="calling__item">
@@ -69,13 +69,13 @@ onMounted(() => {
 
   &__items {
     position: relative;
-    width: 100%;
     padding: 180px;
+    width: 100%;
 
     span {
-      position: absolute;
       bottom: 0;
       left: 0;
+      position: absolute;
     }
   }
 
@@ -91,24 +91,26 @@ onMounted(() => {
   @media only screen and (max-width: 1120px) {
     grid-template-columns: 1fr;
     justify-items: center;
+    overflow: hidden;
 
     &__items {
-      display: none;
+      height: 100vh;
     }
   }
 }
 
 .child-1 {
-  transform-origin: right bottom;
-  z-index: 1;
   animation-name: child-1;
   animation-fill-mode: forwards;
   animation-duration: 2s;
+  transform-origin: right bottom;
+  z-index: 1;
 
   @keyframes child-1 {
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(45deg);
     }
@@ -116,17 +118,18 @@ onMounted(() => {
 }
 
 .child-2 {
-  transform-origin: right bottom;
   animation-name: child-2;
   animation-delay: 1s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  transform-origin: right bottom;
   z-index: 1;
 
   @keyframes child-2 {
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(90deg);
     }

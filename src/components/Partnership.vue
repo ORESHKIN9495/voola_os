@@ -8,15 +8,17 @@
         Voola OS is a European alternative to dominating mobile operating systems, and the only mobile OS offering an exclusive licensing model for local implementations.<br /><br />
         On the market since 2020, and now already in its 2th generation, Voola OS offers a secure platform for trusted mobile solutions.<br /><br />
         With Voola OS you can also run Android™ apps with our dedicated App Support solution. Vools OS is managed and developer by Finnish company
-        <span>of seven possibilities UAB</span> .
+        <span style="color: var(--scheme-v3)">of seven possibilities UAB</span> .
       </p>
 
       <div>
         <i class="icon-2-user"></i>
-        <div>
-          <p>Business & partnership inquiries:</p>
+
+        <p style="margin-left: 20px">
+          Business & partnership inquiries:<br />
+
           <a href="/">partners@voola.io</a>
-        </div>
+        </p>
       </div>
     </article>
   </section>
@@ -29,27 +31,18 @@ import Partnercard from './Partnercard.vue'
 <style lang="scss" scoped>
 .partnership {
   display: grid;
-  gap: var(--scheme-gap);
   grid-template-columns: repeat(2, 1fr);
+  gap: var(--scheme-gap);
 
-  &:last-child {
+  div {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     margin-top: 20px;
-
-    i {
-      margin-right: 20px;
-      transform: scaleX(-1);
-    }
 
     a {
       color: var(--scheme-v3);
       text-decoration: underline;
     }
-  }
-
-  span {
-    color: var(--scheme-v3);
   }
 
   @media only screen and (max-width: 920px) {

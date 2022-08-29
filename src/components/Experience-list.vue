@@ -40,29 +40,25 @@ const appsList = ref([
 
 <style lang="scss" scoped>
 section {
-  justify-items: flex-end;
   display: grid;
-  grid-template-columns: repeat(2, 380px);
-  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
+  justify-items: flex-end;
   margin: 0;
-
-  article {
-    align-items: center;
-    display: grid;
-    justify-items: flex-start;
-  }
+  padding: 0;
 
   picture {
     background: var(--scheme-v4);
     border-radius: 35px;
     display: grid;
     margin-bottom: 20px;
+    max-width: 70px;
     padding: 20px;
   }
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
+    justify-items: flex-start;
   }
 }
 </style>

@@ -43,8 +43,8 @@ const itemList = ref([
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
     gap: var(--scheme-gap);
+    justify-items: center;
 
     span {
       align-items: center;
@@ -58,7 +58,6 @@ const itemList = ref([
 
     @media only screen and (max-width: 1120px) {
       grid-template-columns: 1fr;
-
       justify-items: center;
 
       span {

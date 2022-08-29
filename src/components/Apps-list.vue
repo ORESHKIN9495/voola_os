@@ -72,7 +72,6 @@ section {
   }
 
   article {
-    align-items: center;
     display: grid;
     justify-items: center;
     max-width: 420px;
@@ -83,6 +82,7 @@ section {
       display: grid;
       margin-bottom: 20px;
       padding: 20px;
+      max-width: 70px;
     }
   }
 }
