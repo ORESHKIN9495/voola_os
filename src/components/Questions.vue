@@ -76,17 +76,19 @@ section {
     border: 1px solid var(--scheme-v4);
     box-shadow: 0 5px 10px 5px var(--scheme-v6);
     border-radius: 10px;
+    cursor: pointer;
     margin: 20px 0;
     padding: 20px;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      background: #4e94d72e;
+    }
 
     p {
       align-items: center;
       display: flex;
       justify-content: space-between;
-
-      svg {
-        cursor: pointer;
-      }
     }
 
     hr {

@@ -94,11 +94,10 @@ const isActive = (e) => {
   border-radius: 0 0 16px 16px;
   display: flex;
   flex-direction: column;
-  height: 900px;
   margin: 0;
   overflow-y: auto;
   position: absolute;
-  padding: 40px;
+  padding: 80px 40px 40px;
   right: 0;
   scrollbar-width: none;
   top: 0;
@@ -114,7 +113,7 @@ const isActive = (e) => {
   a {
     color: var(--scheme-v5);
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 

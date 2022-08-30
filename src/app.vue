@@ -76,8 +76,8 @@ import Footer from './components/Footer.vue'
   font-display: swap;
 }
 
-.icon-2-user:before {
-  content: '\e063';
+.icon-3-user:before {
+  content: '\e062';
 }
 
 .icon-wallet:before {
@@ -106,12 +106,13 @@ i {
   --scheme-v5: #62686d;
   --scheme-v6: #00000008;
   --scheme-v7: #4e94d708;
+  --scheme-v8: #b5ddea;
   --scheme-shadow: #5a5a5a47;
 
   // project font-family
   --scheme-font: 'Renner*', Inter, Avenir, Helvetica, Arial, sans-serif;
   --scheme-h: 46px;
-  --scheme-m: 32px;
+  --scheme-m: 30px;
   --scheme-xs: 16px;
   --scheme-s: 12px;
 
@@ -213,6 +214,7 @@ b {
 p {
   margin: 0;
   font-weight: 300;
+  color: var(--scheme-v2);
 }
 
 strong {

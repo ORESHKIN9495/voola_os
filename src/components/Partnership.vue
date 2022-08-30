@@ -12,7 +12,7 @@
       </p>
 
       <div>
-        <i class="icon-2-user"></i>
+        <i style="color: var(--scheme-v2)" class="icon-3-user"></i>
 
         <p style="margin-left: 20px">
           Business & partnership inquiries:<br />
