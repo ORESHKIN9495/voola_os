@@ -48,56 +48,45 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .api {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: calc(var(--scheme-gap) * 4);
+  overflow: hidden;
 
   article {
+    max-width: 800px;
     &:last-child {
-      position: relative;
+      position: absolute;
+      top: 20%;
+      right: 40%;
+      z-index: -2;
 
-      div {
+      span {
+        animation-delay: 0.5s;
         position: absolute;
-        top: 20%;
+        opacity: 70%;
+        transform-origin: left bottom;
+        transform: rotate3d(-1, 1, 0.4, 58deg);
+        top: 100px;
 
-        span {
-          position: absolute;
-          opacity: 70%;
-          transform-origin: left bottom;
-          transform: rotate3d(-1, 1, 0.4, 58deg);
-          animation-delay: 0.5s;
-          top: 100px;
+        &:first-child {
+          opacity: 30%;
+        }
 
-          &:first-child {
-            opacity: 30%;
-          }
+        &:nth-child(2) {
+          z-index: -1;
+          opacity: 50%;
+        }
 
-          &:nth-child(2) {
-            z-index: 1;
-            opacity: 50%;
-          }
-
-          &:last-child {
-            z-index: 1;
-          }
+        &:last-child {
+          z-index: -1;
         }
       }
     }
   }
 
-  @media only screen and (max-width: 1220px) {
-    overflow: hidden;
-
+  @media only screen and (max-width: 920px) {
     article {
       &:last-child {
-        position: relative;
-        height: 100vh;
-
-        div {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
+        top: 40%;
+        right: 100%;
       }
     }
   }

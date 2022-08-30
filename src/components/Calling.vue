@@ -1,12 +1,12 @@
 <template>
   <section id="calling" class="calling" ref="a">
-    <div class="calling__items">
+    <article>
       <span><Device /></span>
       <span ref="b"><Device /></span>
       <span ref="c"><Device /></span>
-    </div>
+    </article>
 
-    <div class="calling__item">
+    <article>
       <h2>Calling</h2>
 
       <span
@@ -15,7 +15,7 @@
           <p style="font-size: var(--scheme-xs); margin: 10px 0">{{ item.body }}</p>
         </h3></span
       >
-    </div>
+    </article>
   </section>
 </template>
 
@@ -63,38 +63,41 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .calling {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--scheme-gap) * 4);
+  overflow: hidden;
 
-  &__items {
-    position: relative;
-    padding: 180px;
-    width: 100%;
-
-    span {
-      bottom: 0;
-      left: 0;
+  article {
+    &:first-child {
       position: absolute;
+      top: 20%;
+      z-index: -2;
+
+      span {
+        top: 0;
+        left: 0;
+        opacity: 70%;
+        position: absolute;
+      }
+
+      @media only screen and (max-width: 1120px) {
+        animation-delay: 1s;
+        top: 40%;
+      }
     }
-  }
 
-  &__item {
-    span {
-      align-items: center;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--scheme-gap);
-    }
-  }
+    &:last-child {
+      max-width: 800px;
+      margin: 120px 0 120px auto;
 
-  @media only screen and (max-width: 1120px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    overflow: hidden;
+      span {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--scheme-gap);
 
-    &__items {
-      height: 100vh;
+        @media only screen and (max-width: 1120px) {
+          grid-template-columns: 1fr;
+        }
+      }
     }
   }
 }

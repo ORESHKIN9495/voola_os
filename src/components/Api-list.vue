@@ -48,6 +48,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
   padding: 0;
+  z-index: 1;
 
   picture {
     background: var(--scheme-v4);

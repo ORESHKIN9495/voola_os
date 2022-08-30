@@ -1,11 +1,9 @@
 <template>
   <section id="exp" class="exp">
     <article ref="a">
-      <div>
-        <span><Device /></span>
-        <span ref="b"><Device /></span>
-        <span ref="c"><Device /></span>
-      </div>
+      <span><Device /></span>
+      <span ref="b"><Device /></span>
+      <span ref="c"><Device /></span>
     </article>
 
     <article>
@@ -47,37 +45,33 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .exp {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: calc(var(--scheme-gap) * 4);
+  overflow: hidden;
 
   article {
+    max-width: 800px;
+    margin: 100px 0 120px auto;
+
     &:first-child {
-      position: relative;
+      position: absolute;
+      top: 25%;
+      transform: rotate(-25deg);
 
-      div {
+      span {
+        opacity: 70%;
         position: absolute;
-        top: 40%;
-        transform: rotate(-25deg);
+        z-index: -3;
 
-        span {
-          opacity: 70%;
-          position: absolute;
-
-          &:first-child {
-            z-index: 10;
-          }
+        &:first-child {
+          z-index: -1;
         }
       }
     }
   }
 
   @media only screen and (max-width: 920px) {
-    overflow: hidden;
-
     article {
       &:first-child {
-        height: 100vh;
+        top: 35%;
       }
     }
   }
