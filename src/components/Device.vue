@@ -28,6 +28,7 @@ defineProps({
   max-height: 395px;
   margin: 0 auto;
   width: 100vh;
+  position: relative;
 
   &::before {
     background: linear-gradient(to top, #639bcd, #cae4fb);
