@@ -15,7 +15,7 @@
       </p>
 
       <span>
-        <svg @click="visible = !visible" ref="cros" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" :class="[visible ? `cros` : '']">
+        <svg @click="visible = !visible" ref="cros" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" :class="[visible ? `cros` : '']" width="60px" height="60px">
           <path
             fill="var(--scheme-v3)"
             d="M18.5,8.51h-7v-7A1.5,1.5,0,0,0,10,0h0A1.5,1.5,0,0,0,8.5,1.5v7h-7a1.5,1.5,0,0,0,0,3h7v7A1.5,1.5,0,0,0,10,20h0a1.5,1.5,0,0,0,1.5-1.5v-7h7a1.5,1.5,0,0,0,0-3Z"
@@ -57,34 +57,29 @@ section {
 
   article:last-child {
     display: grid;
+    gap: calc(var(--scheme-gap) / 1.5);
 
     span:last-child {
-      background: none;
       margin: auto 0 0 auto;
 
       svg {
         background: hsla(0, 0%, 100%, 0.5);
         border-radius: 50px;
         cursor: pointer;
-        max-height: 60px;
         padding: 20px;
         transition: 0.3s ease-in-out;
+
+        &.cros {
+          transform: rotate(45deg);
+        }
 
         &:hover {
           background: hsla(0, 0%, 100%, 0.8);
         }
 
-        &.cros {
-          transform: rotate(45deg);
+        @media only screen and (max-width: 920px) {
+          cursor: auto;
         }
-      }
-    }
-
-    @media only screen and (max-width: 1020px) {
-      flex-wrap: wrap;
-
-      button {
-        margin: auto 0 0 auto;
       }
     }
   }

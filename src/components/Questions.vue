@@ -81,20 +81,26 @@ section {
     padding: 20px;
     transition: all 0.1s ease-in-out;
 
-    &:hover {
-      background: #4e94d72e;
+    svg {
+      max-width: 12px;
+      width: 100%;
     }
 
     p {
       align-items: center;
       display: flex;
       justify-content: space-between;
+      word-break: break-word;
     }
 
     hr {
       border: none;
       border-top: 1px solid var(--scheme-v4);
       margin: 20px 0;
+    }
+
+    @media only screen and (max-width: 920px) {
+      cursor: auto;
     }
   }
 }
