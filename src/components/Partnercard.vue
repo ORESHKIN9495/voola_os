@@ -66,7 +66,7 @@ section {
         background: hsla(0, 0%, 100%, 0.5);
         border-radius: 50px;
         cursor: pointer;
-        height: 65px;
+        max-height: 60px;
         padding: 20px;
         transition: 0.3s ease-in-out;
 

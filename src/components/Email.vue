@@ -48,12 +48,44 @@ const itemList = ref([
 
     span {
       align-items: center;
-      border-radius: 100%;
-      background: var(--scheme-v7);
       display: flex;
       justify-content: center;
       height: 645px;
+      position: relative;
       width: 645px;
+
+      &::before {
+        animation-name: puls;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        border-radius: 100%;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        @keyframes puls {
+          0% {
+            background: var(--scheme-v1);
+          }
+          50% {
+            background: var(--scheme-v7);
+          }
+
+          100% {
+            background: var(--scheme-v1);
+          }
+        }
+        @media only screen and (max-width: 1120px) {
+          animation-play-state: paused;
+        }
+      }
     }
 
     @media only screen and (max-width: 1120px) {

@@ -1,7 +1,7 @@
 <template>
   <section id="infra">
     <article>
-      <h2 style="font-weight: 400; max-width: 915px">
+      <h2>
         Infrastructure for your ecosystem
 
         <p style="font-size: 20px; margin-top: 20px">
@@ -25,6 +25,13 @@ section {
     justify-content: center;
     padding: 4em 2em;
     text-align: center;
+
+    h2 {
+      font-weight: 400;
+      max-width: 915px;
+      width: 100%;
+      word-break: break-all;
+    }
   }
 }
 </style>

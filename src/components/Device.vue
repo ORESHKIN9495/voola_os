@@ -90,6 +90,7 @@ defineProps({
   &.size-l {
     max-height: 590px;
     max-width: 290px;
+    width: 100%;
   }
 
   &.block-v {
@@ -111,6 +112,7 @@ defineProps({
     max-height: 195px;
     max-width: 395px;
     margin: 0;
+    width: 100%;
 
     &::before {
       content: none;

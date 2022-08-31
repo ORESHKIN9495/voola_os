@@ -256,6 +256,7 @@ section {
     margin: 2em 0;
     width: 100%;
     display: block;
+    scrollbar-width: none;
 
     @media only screen and (max-width: 920px) {
       overflow-x: scroll;

@@ -1,7 +1,7 @@
 <template>
   <section>
     <article>
-      <h2 style="font-weight: 400; max-width: 700px">
+      <h2>
         Rebooted developer experience
 
         <p style="font-size: 20px; margin-top: 20px">
@@ -24,6 +24,13 @@ section {
     justify-content: center;
     padding: 4em 2em;
     text-align: center;
+
+    h2 {
+      font-weight: 400;
+      max-width: 700px;
+      width: 100%;
+      word-break: break-all;
+    }
   }
 }
 </style>

@@ -64,6 +64,8 @@ onMounted(() => {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: calc(var(--scheme-max-width) / 1.2);
     padding: 20px 40px;
     position: relative;
 

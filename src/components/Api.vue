@@ -15,9 +15,9 @@
 
     <article ref="a">
       <div>
-        <span><Device sizeL /></span>
-        <span ref="b"><Device sizeL /></span>
-        <span ref="c"><Device sizeL /></span>
+        <span><Device sizeL style="width: 100vw" /></span>
+        <span ref="b"><Device sizeL style="width: 100vw" /></span>
+        <span ref="c"><Device sizeL style="width: 100vw" /></span>
       </div>
     </article>
   </section>

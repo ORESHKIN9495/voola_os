@@ -78,9 +78,10 @@ onMounted(() => {
         position: absolute;
       }
 
-      @media only screen and (max-width: 1120px) {
-        animation-delay: 1s;
-        top: 40%;
+      @media only screen and (max-width: 920px) {
+        span {
+          display: none;
+        }
       }
     }
 
@@ -91,10 +92,10 @@ onMounted(() => {
       span {
         align-items: center;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: var(--scheme-gap);
 
-        @media only screen and (max-width: 1120px) {
+        @media only screen and (max-width: 920px) {
           grid-template-columns: 1fr;
         }
       }
