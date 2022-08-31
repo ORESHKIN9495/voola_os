@@ -47,7 +47,7 @@ const itemList = ref([
 ])
 
 onMounted(() => {
-  const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 1200
+  const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 800
   const move = window.addEventListener('scroll', (e) => {
     if (window.pageYOffset >= offsetEl) {
       b.value.classList.add('child-1')

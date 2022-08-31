@@ -1,13 +1,15 @@
 <template>
   <section id="feature">
     <article v-for="item in listItems" :key="item.id">
-      <picture v-html="item.icon"></picture>
+      <span v-html="item.icon"></span>
 
-      <h3 style="margin-top: 20px">{{ item.title }}</h3>
+      <h3 style="margin-top: 20px">
+        {{ item.title }}
 
-      <p>{{ item.body }}</p>
+        <p style="font-size: 16px">{{ item.body }}</p>
+      </h3>
 
-      <span v-html="item.button"></span>
+      <button v-html="item.button"></button>
     </article>
   </section>
 </template>
@@ -87,7 +89,6 @@ const listItems = ref([
     title: 'Voola OS whitepaper',
     body: 'Learn more about Voola OS. On the site technical article provides an overview of Voola OS ecosystem and more.',
     button: `<button style='font-size: var(--scheme-xs);
-          margin: 20px 0 0;
           padding: 1em 4em;
           '>Download</button>`,
     icon: `<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,7 +140,7 @@ section {
     justify-items: flex-start;
     padding: 2em;
 
-    picture {
+    span {
       background: var(--scheme-v1);
       border-radius: 35px;
       display: grid;
@@ -151,7 +152,7 @@ section {
       background: hsl(263, 100%, 96%);
       grid-area: 1 / 1 / 2 / 2;
 
-      picture {
+      span {
         padding: 18px 22px;
       }
     }

@@ -1,7 +1,7 @@
 <template>
   <section>
     <article v-for="item in appsList" :key="item.id">
-      <picture v-html="item.icon"></picture>
+      <span v-html="item.icon"></span>
 
       <h3>
         {{ item.title }}
@@ -76,7 +76,7 @@ section {
     justify-items: center;
     max-width: 420px;
 
-    picture {
+    span {
       background: var(--scheme-v4);
       border-radius: 35px;
       display: grid;
