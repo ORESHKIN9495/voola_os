@@ -77,7 +77,7 @@ items.forEach((item, index) => {
 <template>
   <nav>
     <ul>
-      <li :name="item.id" v-for="(item, i) in items" :key="i" v-scroll-to="'#' + item.id" @click="setActive(i)" :class="{ active: i == selectedItem }">{{ item.title }}</li>
+      <li v-for="(item, i) in items" :key="i" v-scroll-to="'#' + item.id" @click="setActive(i)" :class="{ active: i == selectedItem }">{{ item.title }}</li>
     </ul>
   </nav>
 </template>

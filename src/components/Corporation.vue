@@ -32,8 +32,8 @@ const corpItems = [
       </p>
     </h3>
 
-    <article>
-      <div v-for="item in corpItems" :key="item.id">
+    <div>
+      <article v-for="item in corpItems" :key="item.id">
         <Device v-if="item.id == 2" vert sizeM />
 
         <Device v-else vert />
@@ -42,8 +42,8 @@ const corpItems = [
           {{ item.tittle }}
           <p style="max-width: 355px">{{ item.descr }}</p>
         </h3>
-      </div>
-    </article>
+      </article>
+    </div>
   </section>
 </template>
 
@@ -56,16 +56,15 @@ section {
     margin: 10px auto;
   }
 
-  article {
+  div {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--scheme-gap);
-    margin: var(--scheme-gap) 0;
+    margin: var(--scheme-gap) auto;
 
     @media only screen and (max-width: 920px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
     }
   }
 }

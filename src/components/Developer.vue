@@ -18,16 +18,14 @@ section {
   article {
     background: linear-gradient(207deg, rgba(236, 243, 248, 1) 0%, rgba(248, 249, 231, 1) 100%);
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
     padding: 4em 2em;
-    text-align: center;
 
     h2 {
       font-weight: 400;
+      margin: 0 auto;
       max-width: 700px;
-      width: 100%;
-      word-break: break-all;
+      text-align: center;
+      word-break: break-word;
     }
   }
 }

@@ -19,16 +19,14 @@ section {
   article {
     background: linear-gradient(207deg, rgba(252, 253, 232, 1) 0%, rgba(231, 215, 210, 1) 100%);
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
     padding: 4em 2em;
-    text-align: center;
 
     h2 {
       font-weight: 400;
       max-width: 915px;
-      width: 100%;
-      word-break: break-all;
+      margin: 0 auto;
+      text-align: center;
+      word-break: break-word;
     }
   }
 }

@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const isOpen = ref(false)
-const currentIndex = ref(null)
+
 const listItems = [
   {
     id: 1,
@@ -30,35 +29,37 @@ const listItems = [
   },
 ]
 
-const toggle = (id) => {
-  if (currentIndex.value !== id) {
-    isOpen.value = true
-    currentIndex.value = id
-  } else if (currentIndex.value === id) {
-    currentIndex.value = null
+const selectedItem = ref(null)
+
+let isActive = false
+
+const setActive = (i) => {
+  if (selectedItem.value == null) {
+    selectedItem.value = i
+  } else {
+    selectedItem.value = null
   }
 }
+listItems.forEach((item, index) => {
+  return (isActive = item == listItems[index])
+})
 </script>
 
 <template>
   <section>
-    <article v-for="item in listItems" :key="item.id" @click.prevent="toggle(item.id)">
+    <article v-for="(item, i) in listItems" :key="i" @click="setActive(i)">
       <p>
         {{ item.title }}
 
-        <svg v-if="isOpen && currentIndex === item.id" width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-
-        <svg v-else width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg :class="{ active: i == selectedItem }" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </p>
 
-      <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
+      <span v-if="i == selectedItem" style="color: var(--scheme-v5)">
         <hr />
         {{ item.body }}
-      </div>
+      </span>
     </article>
 
     <a href="/" style="color: var(--scheme-v3)">Show more</a>
@@ -77,13 +78,17 @@ section {
     box-shadow: 0 5px 10px 5px var(--scheme-v6);
     border-radius: 10px;
     cursor: pointer;
-    margin: 20px 0;
+    margin-bottom: 20px;
     padding: 20px;
-    transition: all 0.1s ease-in-out;
 
     svg {
       max-width: 12px;
       width: 100%;
+      transition: 0.2s ease-in-out;
+
+      &.active {
+        transform: rotate(45deg);
+      }
     }
 
     p {

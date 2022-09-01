@@ -47,7 +47,6 @@ section {
 
   h3 {
     font-size: 20px;
-    margin: 50px 0 auto;
 
     p {
       font-size: var(--scheme-xs);
@@ -55,6 +54,7 @@ section {
   }
 
   article {
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--scheme-gap);
@@ -62,6 +62,7 @@ section {
     &:first-child {
       grid-area: 1/1/2/3;
       justify-items: flex-end;
+      margin: -200px 0 0 0;
     }
 
     &:nth-child(2) {
@@ -69,7 +70,6 @@ section {
     }
 
     &:nth-child(3) {
-      align-items: flex-end;
       grid-area: 2/1/2/3;
       justify-items: flex-end;
       margin-top: -200px;

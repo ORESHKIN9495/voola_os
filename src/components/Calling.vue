@@ -1,20 +1,20 @@
 <template>
   <section id="calling" class="calling" ref="a">
-    <article>
+    <div>
       <span><Device /></span>
       <span ref="b"><Device /></span>
       <span ref="c"><Device /></span>
-    </article>
+    </div>
 
     <article>
       <h2>Calling</h2>
 
-      <span
-        ><h3 v-for="item in itemList" :key="item.id" style="font-size: 20px; margin-top: 40px">
+      <span>
+        <h3 v-for="item in itemList" :key="item.id" style="font-size: 20px; margin-top: 40px">
           {{ item.title }}
           <p style="font-size: var(--scheme-xs); margin: 10px 0">{{ item.body }}</p>
-        </h3></span
-      >
+        </h3>
+      </span>
     </article>
   </section>
 </template>
@@ -65,39 +65,37 @@ onMounted(() => {
 .calling {
   overflow: hidden;
 
-  article {
-    &:first-child {
+  div {
+    position: absolute;
+    top: 20%;
+    z-index: -2;
+
+    span {
+      top: 0;
+      left: 0;
+      opacity: 70%;
       position: absolute;
-      top: 20%;
-      z-index: -2;
-
-      span {
-        top: 0;
-        left: 0;
-        opacity: 70%;
-        position: absolute;
-      }
-
-      @media only screen and (max-width: 920px) {
-        span {
-          display: none;
-        }
-      }
     }
 
-    &:last-child {
-      max-width: 800px;
-      margin: 120px 0 120px auto;
-
+    @media only screen and (max-width: 920px) {
       span {
-        align-items: center;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--scheme-gap);
+        display: none;
+      }
+    }
+  }
 
-        @media only screen and (max-width: 920px) {
-          grid-template-columns: 1fr;
-        }
+  article {
+    max-width: 800px;
+    margin: 120px 0 120px auto;
+
+    span {
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--scheme-gap);
+
+      @media only screen and (max-width: 920px) {
+        grid-template-columns: 1fr;
       }
     }
   }

@@ -75,6 +75,7 @@ const itemList = [
       }
       @media only screen and (max-width: 1120px) {
         animation-play-state: paused;
+        animation: none;
       }
     }
   }
@@ -85,7 +86,6 @@ const itemList = [
     justify-items: center;
 
     span {
-      animation-name: '';
       background: inherit;
       display: block;
       height: 100%;

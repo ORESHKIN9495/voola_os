@@ -23,7 +23,7 @@ onMounted(() => {
 
 <template>
   <section id="api" class="api">
-    <article>
+    <article style="max-width: 800px">
       <h2>
         Bridging the API gap
         <p style="margin-top: 20px; font-size: var(--scheme-xs)">
@@ -36,13 +36,11 @@ onMounted(() => {
       <Api-list />
     </article>
 
-    <article ref="a">
-      <div>
-        <span><Device sizeL style="width: 100vw" /></span>
-        <span ref="b"><Device sizeL style="width: 100vw" /></span>
-        <span ref="c"><Device sizeL style="width: 100vw" /></span>
-      </div>
-    </article>
+    <div ref="a">
+      <span><Device sizeL style="width: 100vw" /></span>
+      <span ref="b"><Device sizeL style="width: 100vw" /></span>
+      <span ref="c"><Device sizeL style="width: 100vw" /></span>
+    </div>
   </section>
 </template>
 
@@ -50,44 +48,39 @@ onMounted(() => {
 .api {
   overflow: hidden;
 
-  article {
-    max-width: 800px;
-    &:last-child {
+  div {
+    position: absolute;
+    top: 0;
+    right: 40%;
+    z-index: -2;
+
+    span {
+      animation-delay: 0.5s;
       position: absolute;
-      top: 20%;
-      right: 40%;
-      z-index: -2;
+      opacity: 70%;
+      transform-origin: left bottom;
+      transform: rotate3d(-1, 1, 0.4, 58deg);
+      top: 100px;
 
-      span {
-        animation-delay: 0.5s;
-        position: absolute;
-        opacity: 70%;
-        transform-origin: left bottom;
-        transform: rotate3d(-1, 1, 0.4, 58deg);
-        top: 100px;
+      &:first-child {
+        opacity: 30%;
+      }
 
-        &:first-child {
-          opacity: 30%;
-        }
+      &:nth-child(2) {
+        z-index: -1;
+        opacity: 50%;
+      }
 
-        &:nth-child(2) {
-          z-index: -1;
-          opacity: 50%;
-        }
-
-        &:last-child {
-          z-index: -1;
-        }
+      &:last-child {
+        z-index: -1;
       }
     }
   }
 
   @media only screen and (max-width: 920px) {
-    article {
-      &:last-child {
-        top: 40%;
-        right: 100%;
-      }
+    div {
+      top: 30%;
+      left: 0;
     }
   }
 }

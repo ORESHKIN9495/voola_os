@@ -32,7 +32,7 @@ const appsList = [
 <template>
   <section>
     <article v-for="item in appsList" :key="item.id">
-      <span v-html="item.icon"></span>
+      <i v-html="item.icon"></i>
 
       <h3>
         {{ item.title }}
@@ -47,7 +47,7 @@ section {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--scheme-gap) * 3);
+  gap: calc(var(--scheme-gap) * 2);
   justify-content: center;
   overflow: hidden;
   text-align: center;
@@ -76,7 +76,7 @@ section {
     justify-items: center;
     max-width: 420px;
 
-    span {
+    i {
       background: var(--scheme-v4);
       border-radius: 35px;
       display: grid;

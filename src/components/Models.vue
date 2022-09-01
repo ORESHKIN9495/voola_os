@@ -58,7 +58,6 @@ section {
 
     @media only screen and (max-width: 920px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
       text-align: center;
     }
   }

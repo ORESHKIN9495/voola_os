@@ -28,7 +28,7 @@ const appsList = ref([
 <template>
   <section>
     <article v-for="item in appsList" :key="item.id">
-      <span v-html="item.icon"></span>
+      <i v-html="item.icon"></i>
 
       <h3>
         {{ item.title }}
@@ -43,11 +43,10 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--scheme-gap);
-  justify-items: flex-end;
   margin: 0;
   padding: 0;
 
-  span {
+  i {
     background: var(--scheme-v4);
     border-radius: 35px;
     display: grid;
@@ -58,7 +57,6 @@ section {
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
-    justify-items: flex-start;
   }
 }
 </style>

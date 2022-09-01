@@ -23,16 +23,16 @@ onMounted(() => {
 
 <template>
   <section id="exp" class="exp">
-    <article ref="a">
+    <div ref="a">
       <span><Device /></span>
       <span ref="b"><Device /></span>
       <span ref="c"><Device /></span>
-    </article>
+    </div>
 
-    <article>
+    <article style="max-width: 800px">
       <h2>
         User experience
-        <p style="margin-top: 20px; font-size: var(--scheme-xs); max-width: 812px">
+        <p style="margin-top: 20px; font-size: var(--scheme-xs)">
           Voola 4 introduces redesigned usage flows for all daily use cases, and a new, crisp visual style improving the legibility across the platform. New ambiences, a
           significant browser upgrade, and a new battery saving mode to squeeze more usage time out of every device are also part of the Voola 4 experience.
         </p>
@@ -48,31 +48,29 @@ onMounted(() => {
   overflow: hidden;
 
   article {
-    max-width: 800px;
-    margin: 100px 0 120px auto;
+    margin: 140px 0 140px auto;
+  }
 
-    &:first-child {
+  div {
+    position: absolute;
+    top: 40%;
+    transform: rotate(-25deg);
+
+    span {
+      opacity: 70%;
       position: absolute;
-      top: 25%;
-      transform: rotate(-25deg);
+      z-index: -3;
 
-      span {
-        opacity: 70%;
-        position: absolute;
-        z-index: -3;
-
-        &:first-child {
-          z-index: -1;
-        }
+      &:first-child {
+        z-index: -1;
       }
     }
   }
 
   @media only screen and (max-width: 920px) {
-    article {
-      &:first-child {
-        top: 35%;
-      }
+    div {
+      top: 45%;
+      left: 0;
     }
   }
 }

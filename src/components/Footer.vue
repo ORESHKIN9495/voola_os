@@ -12,7 +12,7 @@ footer {
   border-top: 2px solid var(--scheme-v4);
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 8em auto 0;
   max-width: calc(var(--scheme-max-width) / 1.2);
   padding: 20px;
 }

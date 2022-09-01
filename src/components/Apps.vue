@@ -44,13 +44,12 @@ section {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: var(--scheme-gap);
   justify-items: center;
 
   p {
-    font-size: 16px;
+    font-size: var(--scheme-xs);
     margin-top: 20px;
-    max-width: 350px;
   }
   article:nth-child(2) {
     align-items: flex-end;
@@ -63,7 +62,6 @@ section {
 
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
   }
 }
 </style>

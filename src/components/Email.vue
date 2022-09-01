@@ -84,6 +84,7 @@ const itemList = ref([
         }
         @media only screen and (max-width: 1120px) {
           animation-play-state: paused;
+          animation: none;
         }
       }
     }

@@ -113,7 +113,7 @@ const listItems = [
 <template>
   <section id="feature">
     <article v-for="item in listItems" :key="item.id">
-      <span v-html="item.icon"></span>
+      <i v-html="item.icon"></i>
 
       <h3 style="margin-top: 20px">
         {{ item.title }}
@@ -140,7 +140,7 @@ section {
     justify-items: flex-start;
     padding: 2em;
 
-    span {
+    i {
       background: var(--scheme-v1);
       border-radius: 35px;
       display: grid;
@@ -152,7 +152,7 @@ section {
       background: hsl(263, 100%, 96%);
       grid-area: 1 / 1 / 2 / 2;
 
-      span {
+      i {
         padding: 18px 22px;
       }
     }
