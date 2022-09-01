@@ -48,7 +48,6 @@ onMounted(() => {
   background: var(--scheme-v1);
   box-shadow: 0 15px 15px 5px var(--scheme-v6);
   position: sticky;
-  padding: 0 2em;
   transform: translateY(-100px);
   transition: transform 0.5s ease-in-out;
   top: 0;
@@ -59,12 +58,17 @@ onMounted(() => {
     justify-content: space-between;
     margin: 0 auto;
     max-width: calc(var(--scheme-max-width) / 1.2);
-    padding: 20px 20px;
+    padding: 20px;
 
     svg {
+      cursor: pointer;
       fill: var(--scheme-v3);
       max-width: 70px;
       z-index: 10;
+
+      &:first-child {
+        max-width: 100px;
+      }
 
       &.active * {
         transition: all 0.1s ease-in-out;

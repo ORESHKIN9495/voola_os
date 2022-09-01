@@ -1,17 +1,19 @@
 <template>
-  <section>
+  <footer>
     <p>2022.Voola</p>
     <p>design by <a style="color: var(--scheme-v3); text-decoration: underline" href="https://roobinium.io/">roobinium.io</a></p>
-  </section>
+  </footer>
 </template>
 
 <script></script>
 
 <style lang="scss" scoped>
-section {
+footer {
   border-top: 2px solid var(--scheme-v4);
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  margin: 0 auto;
+  max-width: calc(var(--scheme-max-width) / 1.2);
+  padding: 20px;
 }
 </style>
