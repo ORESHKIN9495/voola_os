@@ -1,3 +1,8 @@
+<script setup>
+import { ref } from 'vue'
+const visible = ref(false)
+</script>
+
 <template>
   <section ref="a" :class="[visible ? 'active' : '']">
     <article v-if="!visible">
@@ -25,11 +30,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-const visible = ref(false)
-</script>
 
 <style lang="scss" scoped>
 section {

@@ -1,22 +1,21 @@
 <template>
-  <section ref="a" class="header">
-    <article>
-      <picture>
-        <source media="(max-width: 768px)" srcset="../assets/Vector.png" />
-        <source media="(min-width: 769px)" srcset="../assets/Vector@2x.png" />
-        <img src="../assets/Vector@2x.png" alt="" />
-      </picture>
-
-      <svg v-if="!show" @click="show = !show" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <header class="header" ref="a">
+    <section class="header__wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 59.83">
         <path
-          d="M.75 5.25h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5ZM23.25 11.25H.75a.75.75 0 0 0 0 1.5h22.5a.75.75 0 0 0 0-1.5ZM23.25 18.75H.75a.75.75 0 0 0 0 1.5h22.5a.75.75 0 0 0 0-1.5Z"
-          fill="#4E94D7"
+          d="M200 59.83s-44.13-48.2-46.97-51.04c-2.85-2.85-6.17-5.05-9.88-6.56C139.57.78 135.79.04 131.92.04s-7.65.74-11.23 2.19c-3.71 1.5-7.03 3.71-9.88 6.56l-.09.09-6.99 7.62 8.92 8.57 7-7.63c6.83-6.73 17.85-6.7 24.64.09 3.3 3.3 5.12 7.69 5.12 12.36s-1.82 9.06-5.12 12.36c-6.79 6.79-17.82 6.82-24.64.09L89.03 8.98l-.09-.1-.09-.09C86 5.94 82.68 3.74 78.97 2.23 75.38.78 71.61.04 67.73.04S60.08.78 56.5 2.23c-3.71 1.5-7.03 3.71-9.88 6.56-2.85 2.85-5.05 6.17-6.56 9.88-.67 1.64-1.18 3.33-1.54 5.04L16.79 0H0s43.77 48.16 46.62 51.01c2.85 2.85 6.17 5.05 9.88 6.56 3.58 1.45 7.36 2.19 11.23 2.19s7.65-.74 11.23-2.19c3.71-1.5 7.03-3.71 9.88-6.56l.09-.09 7-7.63-8.44-9.12L80 42.35c-6.83 6.73-17.85 6.7-24.64-.09s-6.82-17.91 0-24.73c6.79-6.79 17.82-6.82 24.64-.09l30.61 33.37.09.1.09.09c2.85 2.85 6.17 5.05 9.88 6.56 3.58 1.45 7.36 2.19 11.23 2.19s7.65-.74 11.23-2.19c3.71-1.5 7.03-3.71 9.88-6.56 2.85-2.85 5.05-6.17 6.56-9.88.7-1.73 1.24-3.51 1.6-5.32l22.03 24.02h16.79Z"
         />
       </svg>
 
-      <Popup v-if="show" @close="close" />
-    </article>
-  </section>
+      <svg @click="show = !show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" :class="[show ? 'active' : '']">
+        <rect width="100" height="12" rx="6" />
+        <rect width="100" height="12" y="28" rx="6" />
+        <rect width="100" height="12" y="58" rx="6" />
+      </svg>
+
+      <Popup v-if="show" />
+    </section>
+  </header>
 </template>
 
 <script setup>
@@ -24,10 +23,6 @@ import { ref, onMounted } from 'vue'
 import Popup from './Popup.vue'
 
 const a = ref()
-
-const close = () => {
-  show.value = false
-}
 
 let show = ref(false)
 
@@ -52,36 +47,39 @@ onMounted(() => {
 .header {
   background: var(--scheme-v1);
   box-shadow: 0 15px 15px 5px var(--scheme-v6);
-  max-width: 100%;
   position: sticky;
-  padding: 0;
-  transform: translateY(-200px);
-  top: 0;
+  padding: 0 2em;
+  transform: translateY(-100px);
   transition: transform 0.5s ease-in-out;
-  z-index: 9;
+  top: 0;
+  z-index: 2;
 
-  article {
-    align-items: center;
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     max-width: calc(var(--scheme-max-width) / 1.2);
-    padding: 20px 40px;
-    position: relative;
-
-    img {
-      max-width: 80px;
-      vertical-align: middle;
-    }
+    padding: 20px 20px;
 
     svg {
-      cursor: pointer;
-      vertical-align: middle;
-    }
+      fill: var(--scheme-v3);
+      max-width: 70px;
+      z-index: 10;
 
-    @media only screen and (max-width: 920px) {
-      & {
-        padding: 20px;
+      &.active * {
+        transition: all 0.1s ease-in-out;
+
+        &:nth-child(1) {
+          transform: translate(10px, 0px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translate(-40px, 30px) rotate(-45deg);
+        }
       }
     }
   }

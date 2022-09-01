@@ -1,33 +1,8 @@
-<template>
-  <section>
-    <article v-for="item in listItems" :key="item.id" @click.prevent="toggle(item.id)">
-      <p>
-        {{ item.title }}
-
-        <svg v-if="isOpen && currentIndex === item.id" width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-
-        <svg v-else width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </p>
-
-      <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
-        <hr />
-        {{ item.body }}
-      </div>
-    </article>
-
-    <a href="/" style="color: var(--scheme-v3)">Show more</a>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 const isOpen = ref(false)
 const currentIndex = ref(null)
-const listItems = ref([
+const listItems = [
   {
     id: 1,
     title: 'Why is it called Voola OS X?',
@@ -53,7 +28,7 @@ const listItems = ref([
     title: ' How long is the Voola X licence valid?',
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
   },
-])
+]
 
 const toggle = (id) => {
   if (currentIndex.value !== id) {
@@ -64,6 +39,31 @@ const toggle = (id) => {
   }
 }
 </script>
+
+<template>
+  <section>
+    <article v-for="item in listItems" :key="item.id" @click.prevent="toggle(item.id)">
+      <p>
+        {{ item.title }}
+
+        <svg v-if="isOpen && currentIndex === item.id" width="12" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <svg v-else width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 1v10M1 6h10" stroke="#4E94D7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </p>
+
+      <div v-show="isOpen && currentIndex === item.id" style="color: var(--scheme-v5)">
+        <hr />
+        {{ item.body }}
+      </div>
+    </article>
+
+    <a href="/" style="color: var(--scheme-v3)">Show more</a>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 section {

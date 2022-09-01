@@ -1,16 +1,3 @@
-<template>
-  <section>
-    <article v-for="item in appsList" :key="item.id">
-      <span v-html="item.icon"></span>
-
-      <h3>
-        {{ item.title }}
-        <p style="font-size: var(--scheme-xs)">{{ item.body }}</p>
-      </h3>
-    </article>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -37,6 +24,19 @@ const appsList = ref([
   },
 ])
 </script>
+
+<template>
+  <section>
+    <article v-for="item in appsList" :key="item.id">
+      <span v-html="item.icon"></span>
+
+      <h3>
+        {{ item.title }}
+        <p style="font-size: var(--scheme-xs)">{{ item.body }}</p>
+      </h3>
+    </article>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 section {

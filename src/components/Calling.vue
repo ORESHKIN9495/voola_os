@@ -26,7 +26,7 @@ const a = ref('a')
 const b = ref('b')
 const c = ref('c')
 
-const itemList = ref([
+const itemList = [
   {
     title: 'Redesigned incoming calls',
     body: 'In Voola X the gesture indications to answer and reject calls are right under your thumb. ',
@@ -44,7 +44,7 @@ const itemList = ref([
     title: 'Call ending',
     body: 'The full-screen call ending dialog has been replaced with a smaller popup.',
   },
-])
+]
 
 onMounted(() => {
   const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 800

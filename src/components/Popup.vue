@@ -1,19 +1,7 @@
-<template>
-  <section class="popup">
-    <svg @click="$emit('close')" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="m1.833 1.833 12.334 12.333M14.167 1.833 1.833 14.166" stroke="#4E94D7" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-
-    <a class="indexId" :name="item.id" v-for="item in titles" :key="item.id" v-scroll-to="'#' + item.id" @click="isActive($event)">{{ item.title }}</a>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
-const emit = defineEmits(['close'])
-
-const titles = ref([
+const items = [
   {
     id: 'advant',
     title: 'What you’ll get',
@@ -74,21 +62,28 @@ const titles = ref([
     id: 'calling',
     title: 'Calling',
   },
-])
+]
 
-const isActive = (e) => {
-  document.querySelectorAll('.indexId').forEach((el) => {
-    if (e.target.name === el.name) {
-      el.classList.add('isActive')
-    } else {
-      el.classList.remove('isActive')
-    }
-  })
-}
+const selectedItem = ref(0)
+
+let isActive = false
+
+const setActive = (i) => (selectedItem.value = i)
+items.forEach((item, index) => {
+  return (isActive = item == items[index])
+})
 </script>
 
+<template>
+  <nav>
+    <ul>
+      <li :name="item.id" v-for="(item, i) in items" :key="i" v-scroll-to="'#' + item.id" @click="setActive(i)" :class="{ active: i == selectedItem }">{{ item.title }}</li>
+    </ul>
+  </nav>
+</template>
+
 <style lang="scss" scoped>
-.popup {
+nav {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: -5px 5px 25px 5px var(--scheme-v6);
   border-radius: 0 0 16px 16px;
@@ -101,35 +96,23 @@ const isActive = (e) => {
   right: 0;
   scrollbar-width: none;
   top: 0;
-  width: 400px;
+  width: 350px;
 
-  svg {
-    cursor: pointer;
-    position: absolute;
-    right: 45px;
-    top: 25px;
-  }
-
-  a {
+  li {
     color: var(--scheme-v5);
     cursor: pointer;
     font-size: 18px;
     margin-bottom: 10px;
-  }
 
-  .isActive {
-    color: var(--scheme-v2);
+    &.active {
+      color: var(--scheme-v2);
+    }
   }
 
   @media only screen and (max-width: 920px) {
     & {
       height: 450px;
       width: 250px;
-
-      svg {
-        right: 25px;
-        top: 25px;
-      }
 
       a {
         font-size: 16px;

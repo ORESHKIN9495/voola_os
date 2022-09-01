@@ -1,3 +1,7 @@
+<script setup>
+import Questions from './Questions.vue'
+</script>
+
 <template>
   <section id="faq" class="faq">
     <h2>
@@ -8,10 +12,6 @@
     <Questions />
   </section>
 </template>
-
-<script setup>
-import Questions from './Questions.vue'
-</script>
 
 <style lang="scss" scoped>
 .faq {

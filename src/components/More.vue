@@ -1,3 +1,7 @@
+<script setup>
+import Device from './Device.vue'
+</script>
+
 <template>
   <section>
     <article>
@@ -34,10 +38,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import Device from './Device.vue'
-</script>
 
 <style lang="scss" scoped>
 section {

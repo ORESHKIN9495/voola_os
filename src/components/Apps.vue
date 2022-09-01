@@ -39,8 +39,6 @@
   </section>
 </template>
 
-<script setup></script>
-
 <style lang="scss" scoped>
 section {
   align-items: center;

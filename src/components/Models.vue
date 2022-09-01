@@ -1,22 +1,6 @@
-<template>
-  <section id="models">
-    <article>
-      <h2 style="margin: 0; font-weight: 400">
-        VOOLA OS
-
-        <p style="font-size: 20px">is compatible with these devices</p>
-      </h2>
-
-      <span>
-        <p v-for="item in models" :key="item.id" style="margin: 10px 0">{{ item.title }}</p>
-      </span>
-    </article>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
-const models = ref([
+const models = [
   {
     title: 'Sony Xperia 10 III',
   },
@@ -41,8 +25,24 @@ const models = ref([
   {
     title: 'Gemini PDA',
   },
-])
+]
 </script>
+
+<template>
+  <section id="models">
+    <article>
+      <h2 style="margin: 0; font-weight: 400">
+        VOOLA OS
+
+        <p style="font-size: 20px">is compatible with these devices</p>
+      </h2>
+
+      <span>
+        <p v-for="item in models" :key="item.id" style="margin: 10px 0">{{ item.title }}</p>
+      </span>
+    </article>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 section {

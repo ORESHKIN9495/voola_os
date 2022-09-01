@@ -1,3 +1,26 @@
+<script setup>
+import Device from './Device.vue'
+import { ref } from 'vue'
+
+const corpItems = [
+  {
+    id: 1,
+    tittle: 'WPA2 Enterprise',
+    descr: 'WLAN gained support for EAP-PEAP, EAP-TLS, and EAP-TTLS authentication methods.',
+  },
+  {
+    id: 2,
+    tittle: 'Device locking',
+    descr: 'Remotely lock or securely wipe data from compromised devices.',
+  },
+  {
+    id: 3,
+    tittle: 'Multiple users',
+    descr: 'Remotely manage who can access the device, add and remove users, control who can call.',
+  },
+]
+</script>
+
 <template>
   <section id="corp">
     <h3>
@@ -23,29 +46,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import Device from './Device.vue'
-import { ref } from 'vue'
-
-const corpItems = ref([
-  {
-    id: 1,
-    tittle: 'WPA2 Enterprise',
-    descr: 'WLAN gained support for EAP-PEAP, EAP-TLS, and EAP-TTLS authentication methods.',
-  },
-  {
-    id: 2,
-    tittle: 'Device locking',
-    descr: 'Remotely lock or securely wipe data from compromised devices.',
-  },
-  {
-    id: 3,
-    tittle: 'Multiple users',
-    descr: 'Remotely manage who can access the device, add and remove users, control who can call.',
-  },
-])
-</script>
 
 <style lang="scss" scoped>
 section {

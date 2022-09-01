@@ -1,3 +1,7 @@
+<script setup>
+import Device from './Device.vue'
+</script>
+
 <template>
   <section id="customize" class="customize">
     <article class="customize__item">
@@ -57,10 +61,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import Device from './Device.vue'
-</script>
 
 <style lang="scss" scoped>
 .customize {

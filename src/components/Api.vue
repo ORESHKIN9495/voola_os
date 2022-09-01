@@ -1,3 +1,26 @@
+<script setup>
+import ApiList from './Api-list.vue'
+import Device from './Device.vue'
+import { onMounted, ref } from 'vue'
+const a = ref('a')
+const b = ref('b')
+const c = ref('c')
+
+onMounted(() => {
+  const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 1000
+  const move = window.addEventListener('scroll', (e) => {
+    if (window.pageYOffset >= offsetEl) {
+      b.value.classList.add('child-1')
+      c.value.classList.add('child-2')
+    } else {
+      window.removeEventListener('scroll', move)
+      b.value.classList.remove('child-1')
+      c.value.classList.remove('child-2')
+    }
+  })
+})
+</script>
+
 <template>
   <section id="api" class="api">
     <article>
@@ -22,29 +45,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import ApiList from './Api-list.vue'
-import Device from './Device.vue'
-import { onMounted, ref } from 'vue'
-const a = ref('a')
-const b = ref('b')
-const c = ref('c')
-
-onMounted(() => {
-  const offsetEl = a.value.getBoundingClientRect().top + window.pageYOffset - 1000
-  const move = window.addEventListener('scroll', (e) => {
-    if (window.pageYOffset >= offsetEl) {
-      b.value.classList.add('child-1')
-      c.value.classList.add('child-2')
-    } else {
-      window.removeEventListener('scroll', move)
-      b.value.classList.remove('child-1')
-      c.value.classList.remove('child-2')
-    }
-  })
-})
-</script>
 
 <style lang="scss" scoped>
 .api {

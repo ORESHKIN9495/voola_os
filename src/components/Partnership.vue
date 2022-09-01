@@ -1,3 +1,7 @@
+<script setup>
+import Partnercard from './Partnercard.vue'
+</script>
+
 <template>
   <section id="partnership" class="partnership">
     <Partnercard />
@@ -23,10 +27,6 @@
     </article>
   </section>
 </template>
-
-<script setup>
-import Partnercard from './Partnercard.vue'
-</script>
 
 <style lang="scss" scoped>
 .partnership {

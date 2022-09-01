@@ -1,19 +1,6 @@
-<template>
-  <section>
-    <article v-for="item in appsList" :key="item.id">
-      <span v-html="item.icon"></span>
-
-      <h3>
-        {{ item.title }}
-        <p style="font-size: var(--scheme-xs)">{{ item.body }}</p>
-      </h3>
-    </article>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
-const appsList = ref([
+const appsList = [
   {
     icon: `<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.987 2.973 7.333 5.48C5.8 6.053 4.547 7.867 4.547 9.493V19.4c0 1.573 1.04 3.64 2.306 4.587l5.734 4.28c1.88 1.413 4.973 1.413 6.853 0l5.733-4.28c1.267-.947 2.307-3.014 2.307-4.587V9.493c0-1.64-1.253-3.453-2.787-4.026L18.04 2.973c-1.133-.413-2.947-.413-4.053 0Z" stroke="#4E94D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m12.067 15.827 2.146 2.146 5.734-5.733" stroke="#4E94D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     title: 'Firejail sandboxing for apps',
@@ -39,8 +26,21 @@ const appsList = ref([
     title: 'Data ebcryption',
     body: 'Encryption is enabled on all new Voola devices. This helps to keep data safe whether it is stored on the device, on a memory card, or a USB On-The-Go storage.',
   },
-])
+]
 </script>
+
+<template>
+  <section>
+    <article v-for="item in appsList" :key="item.id">
+      <span v-html="item.icon"></span>
+
+      <h3>
+        {{ item.title }}
+        <p style="font-size: var(--scheme-xs)">{{ item.body }}</p>
+      </h3>
+    </article>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 section {
