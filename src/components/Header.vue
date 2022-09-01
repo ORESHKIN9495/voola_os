@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import Popup from './Popup.vue'
 
-let show = ref(false)
+const show = ref(false)
 
 const headRef = ref()
 
