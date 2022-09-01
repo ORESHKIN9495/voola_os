@@ -2,29 +2,23 @@
 import { ref, onMounted } from 'vue'
 import Popup from './Popup.vue'
 
-const a = ref()
-
 let show = ref(false)
 
+const headRef = ref()
+
 onMounted(() => {
-  const scrollTop = () => window.pageYOffset || document.documentElement.scrollTop
-  const lastScroll = 1200
-  const preScroll = 200
-
   window.addEventListener('scroll', () => {
-    if (scrollTop() > lastScroll) {
-      a.value.style.transform = `translateY(0)`
-    } else if (scrollTop() < lastScroll) {
-      a.value.style.transform = `translateY(-200px)`
-
-      show.value = false
+    if (window.pageYOffset > 1200) {
+      headRef.value.classList.remove('hide')
+    } else {
+      headRef.value.classList.add('hide')
     }
   })
 })
 </script>
 
 <template>
-  <header class="header" ref="a">
+  <header class="header hide" ref="headRef">
     <section class="header__wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 59.83" width="90px">
         <path
@@ -48,11 +42,14 @@ onMounted(() => {
   background: var(--scheme-v1);
   box-shadow: 0 15px 15px 5px var(--scheme-v6);
   position: sticky;
-  transform: translateY(-100px);
   transition: transform 0.5s ease-in-out;
   padding: 0 2em;
   top: 0;
   z-index: 2;
+
+  &.hide {
+    transform: translateY(-200px);
+  }
 
   &__wrapper {
     display: flex;

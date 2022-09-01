@@ -267,7 +267,7 @@ button {
 
 button {
   background-color: var(--scheme-v3);
-  border-radius: 16px;
+  border-radius: 50px;
   color: var(--scheme-v1);
   cursor: pointer;
   display: inline-block;
