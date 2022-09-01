@@ -12,6 +12,7 @@ onMounted(() => {
       headRef.value.classList.remove('hide')
     } else {
       headRef.value.classList.add('hide')
+      show.value = false
     }
   })
 })
