@@ -87,11 +87,10 @@ nav {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: -5px 5px 25px 5px var(--scheme-v6);
   border-radius: 0 0 16px 16px;
-  margin: 0 2em;
   overflow-y: auto;
   position: absolute;
-  padding: 80px 40px 40px;
-  right: 0;
+  padding: 60px 40px 40px;
+  right: -34px;
   scrollbar-width: none;
   top: 0;
   width: 350px;

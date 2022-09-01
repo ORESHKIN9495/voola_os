@@ -48,7 +48,7 @@ section {
   article:first-child {
     span:first-child {
       display: inline-block;
-      background: hsla(0, 0%, 100%, 0.5);
+      background: var(--scheme-v1);
       border-radius: 10px;
       margin-bottom: 20px;
       padding: 8px 12px;
@@ -63,7 +63,7 @@ section {
       margin: auto 0 0 auto;
 
       svg {
-        background: hsla(0, 0%, 100%, 0.5);
+        background: var(--scheme-v1);
         border-radius: 50px;
         cursor: pointer;
         padding: 20px;
@@ -71,10 +71,6 @@ section {
 
         &.cros {
           transform: rotate(45deg);
-        }
-
-        &:hover {
-          background: hsla(0, 0%, 100%, 0.8);
         }
 
         @media only screen and (max-width: 920px) {
